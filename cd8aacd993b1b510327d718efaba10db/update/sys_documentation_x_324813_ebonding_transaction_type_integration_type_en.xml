@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="integration_type" label="Integration Type" language="en" table="x_324813_ebonding_transaction_type">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>integration_type</element>
+            <help/>
+            <hint/>
+            <label>Integration Type</label>
+            <language>en</language>
+            <name>x_324813_ebonding_transaction_type</name>
+            <plural>Integration Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-11 13:00:23</sys_created_on>
+            <sys_id>c5dc33b193f57910327d718efaba1087</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Integration Type</sys_name>
+            <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+            <sys_update_name>sys_documentation_x_324813_ebonding_transaction_type_integration_type_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-11 13:00:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

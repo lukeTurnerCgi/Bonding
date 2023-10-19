@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_324813_ebonding_integration_field_mappings" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Integration Field Mappings - Default view" name="x_324813_ebonding_integration_field_mappings" related_list="NULL" sys_domain="global" view="Default view">1ccd2daa93317110327d718efaba109d</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_324813_ebonding_choice_mapping.field_mapping</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-13 10:30:45</sys_created_on>
+            <sys_id>14cd2daa93317110327d718efaba109f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-13 10:30:45</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Integration Field Mappings - Default view</calculated_name>
+            <filter/>
+            <name>x_324813_ebonding_integration_field_mappings</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-13 10:30:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ccd2daa93317110327d718efaba109d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Integration Field Mappings - Default view</sys_name>
+            <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+            <sys_update_name>sys_ui_related_x_324813_ebonding_integration_field_mappings_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-13 10:30:45</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

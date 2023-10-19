@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="HTTP Info" section_id="3b84551193f5b510327d718efaba10c0" sys_domain="global" table="x_324813_ebonding_outbound_transactions" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>http_status</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 11:28:16</sys_created_on>
+            <sys_id>0c94951193f5b510327d718efaba102a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HTTP Info" display_value="HTTP Info" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">3b84551193f5b510327d718efaba10c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 11:28:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 11:28:16</sys_created_on>
+            <sys_id>c094951193f5b510327d718efaba102b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HTTP Info" display_value="HTTP Info" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">3b84551193f5b510327d718efaba10c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 11:28:16</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>http_message</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 11:28:16</sys_created_on>
+            <sys_id>4494951193f5b510327d718efaba102b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HTTP Info" display_value="HTTP Info" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">3b84551193f5b510327d718efaba10c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 11:28:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>HTTP Info</caption>
+            <header>false</header>
+            <name>x_324813_ebonding_outbound_transactions</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 11:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3b84551193f5b510327d718efaba10c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_324813_ebonding_outbound_transactions</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+            <sys_update_name>sys_ui_section_3b84551193f5b510327d718efaba10c0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 11:28:16</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

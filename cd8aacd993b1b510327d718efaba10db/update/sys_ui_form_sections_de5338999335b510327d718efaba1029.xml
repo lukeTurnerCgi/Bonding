@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="de5338999335b510327d718efaba1029" sys_domain="global" table="x_324813_ebonding_outbound_transactions" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 09:03:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>925338999335b510327d718efaba1091</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_324813_ebonding_outbound_transactions" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">de5338999335b510327d718efaba1029</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">4cf1b4d59335b510327d718efaba1099</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 09:03:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 09:03:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9e5338999335b510327d718efaba1091</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_324813_ebonding_outbound_transactions" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">de5338999335b510327d718efaba1029</sys_ui_form>
+            <sys_ui_section caption="Payload" display_value="Payload" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">125338999335b510327d718efaba1029</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 09:03:09</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 11:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c94551193f5b510327d718efaba10c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_324813_ebonding_outbound_transactions" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">de5338999335b510327d718efaba1029</sys_ui_form>
+            <sys_ui_section caption="HTTP Info" display_value="HTTP Info" name="x_324813_ebonding_outbound_transactions" sys_domain="global" view="Default view">3b84551193f5b510327d718efaba10c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 11:28:16</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_324813_ebonding_outbound_transactions</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-09 09:03:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>de5338999335b510327d718efaba1029</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_324813_ebonding_outbound_transactions</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+            <sys_update_name>sys_ui_form_sections_de5338999335b510327d718efaba1029</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-09 09:03:09</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

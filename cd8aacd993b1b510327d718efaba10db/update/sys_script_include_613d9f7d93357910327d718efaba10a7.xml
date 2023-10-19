@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_324813_ebonding.TransactionHandler</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TransactionHandler</name>
+        <script><![CDATA[var TransactionHandler = Class.create();
+TransactionHandler.prototype = {
+    initialize: function() {},
+    /*_________________________________________________________________
+       * Description:
+       * Parameters:
+       * Returns:
+       ________________________________________________________________*/
+    proccessInboundTransaction: function(transactionGr) {
+
+        transactionGr.update();
+        var error = false;
+        var payload = JSON.parse(transactionGr.payload);
+        var integType = this.getIntegrationType(payload.case_type, payload.company);
+		var transactionType = this.getTransactionType(payload.transaction_code, integType.getUniqueValue());
+
+        var targetRecord = new GlideRecord(integType.table);
+        var update = false;
+        if (targetRecord.get('number', payload.correlation_id)) {
+            update = true;
+        } else if (transactionType.transaction_code == 'inbound-new') {
+            targetRecord.newRecord();
+        }
+        
+        var output = this.convertInboundPayload(payload, transactionType.getUniqueValue(),targetRecord);
+
+        for (var field in output) {
+            var fieldType = targetRecord.getElement(field).getED().getInternalType();
+            if (fieldType == 'reference') {
+                targetRecord[field].setDisplayValue(output[field]);
+            } else {
+                targetRecord[field] = output[field];
+            }
+        }
+        if (update && targetRecord.isValidRecord()) {
+            targetRecord.update();
+        } else {
+            targetRecord.insert();
+        }
+
+        if (error == false) {
+            transactionGr.target_record = targetRecord.getUniqueValue();
+            transactionGr.state = 'Proccessed';
+            transactionGr.update();
+        } else {
+            transactionGr.state = 'Error';
+            transactionGr.update();
+        }
+    },
+
+    /*_________________________________________________________________
+   * Description:
+   * Parameters:
+   * Returns:
+   ________________________________________________________________*/
+    getIntegrationType: function(case_type, company) {
+        var integType = new GlideRecord('x_324813_ebonding_integration_type');
+        integType.addQuery('case_type', case_type);
+        integType.addQuery('company.name', company);
+        integType.query();
+        if (integType.next()) {
+            return integType;
+        }
+    },
+
+
+    /*_________________________________________________________________
+   * Description:
+   * Parameters:
+   * Returns:
+   ________________________________________________________________*/
+    getTransactionType: function(transaction_code, integTypeId) {
+        var transactionType = new GlideRecord('x_324813_ebonding_transaction_type');
+        transactionType.addQuery('transaction_code', transaction_code);
+        transactionType.addQuery('integration_type', integTypeId);
+        transactionType.setLimit(1);
+        transactionType.query();
+        if (transactionType.next()) {
+            return transactionType;
+        }
+    },
+
+
+    /*_________________________________________________________________
+   * Description:
+   * Parameters:
+   * Returns:
+   ________________________________________________________________*/
+    convertInboundPayload: function(payload, transactionTypeId,targetRecord) {
+        var convertedPayload = {};
+        for (var field in payload) {
+            var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
+            fieldMappings.addQuery('remote_field', field);
+            fieldMappings.addQuery('integration_type', transactionTypeId);
+            fieldMappings.query();
+            if (fieldMappings.next()) {
+                if (fieldMappings.choice_mappings_required == true) {
+                    var choiceMapping = new GlideRecord('x_324813_ebonding_choice_mapping');
+                    choiceMapping.addQuery('remote_choice', payload[field]);
+                    choiceMapping.addQuery('field_mapping', fieldMappings.getUniqueValue());
+                    choiceMapping.query();
+                    if (choiceMapping.next()) {
+                        convertedPayload[fieldMappings.local_field] = choiceMapping.getValue('local_choice');
+                    }
+                } else if (fieldMappings.use_proccessing_script == true) {
+                    convertedPayload[fieldMappings.local_field] = this.evaulateInboundScript(payload, fieldMappings, targetRecord);
+                } else {
+                    convertedPayload[fieldMappings.local_field] = payload[field];
+                }
+            }
+        }
+        return convertedPayload;
+    },
+
+    /*_________________________________________________________________
+       * Description:
+       * Parameters:
+       * Returns:
+       ________________________________________________________________*/
+    evaulateInboundScript: function(payload, fieldMappingGr, targetRecord) {
+        var ge = new GlideScopedEvaluator();
+		ge.putVariable("payload", payload);
+        ge.putVariable("fieldMappingGr", fieldMappingGr);
+        ge.putVariable("targetRecord", targetRecord);
+        ge.evaluateScript(fieldMappingGr, "script"); // Run the script
+        ge.getVariable("answer");
+
+        if (typeof answer == "undefined") {
+            gs.addErrorMessage('answer variable not defined');
+            return;
+        }
+        return answer;
+
+    },
+
+    /*_________________________________________________________________
+       * Description:
+       * Parameters:
+       * Returns:
+       ________________________________________________________________*/
+    createOutboundTransaction: function(taskGr, transactionTypeId) {
+        var transactionTypeGr = new GlideRecord('x_324813_ebonding_transaction_type');
+        if (transactionTypeGr.get(transactionTypeId)) {
+
+            var payload = this.createOutboundPayload(transactionTypeGr, transactionTypeId, taskGr);
+
+            var outboundTransaction = new GlideRecord('x_324813_ebonding_outbound_transactions');
+            outboundTransaction.newRecord();
+            outboundTransaction.payload = JSON.stringify(payload);
+            outboundTransaction.state = 'new';
+            outboundTransaction.trigger_record = taskGr.getUniqueValue();
+            outboundTransaction.transaction_type = transactionTypeId;
+            outboundTransaction.insert();
+        }
+    },
+
+    /*_________________________________________________________________
+          * Description:
+          * Parameters:
+          * Returns:
+          ________________________________________________________________*/
+    createOutboundPayload: function(transactionTypeGr, transactionTypeId, taskGr) {
+
+        var payload = {};
+        payload.transaction_type = transactionTypeGr.getValue('transaction_code');
+
+        var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
+        fieldMappings.addQuery('integration_type', transactionTypeId);
+        fieldMappings.query();
+        while (fieldMappings.next()) {
+            var baseField = this.getBaseField(fieldMappings.local_field);
+            if (fieldMappings.mandatory == true || taskGr[baseField].changes() || fieldMappings.use_proccessing_script == true) {
+                payload[fieldMappings.remote_field] = this.getLocalField(fieldMappings, taskGr);
+            }
+        }
+
+        return payload;
+
+    },
+
+    /*_________________________________________________________________
+       * Description:
+       * Parameters:
+       * Returns:
+       ________________________________________________________________*/
+    getBaseField: function(field) {
+        if (field.indexOf('.') != -1) {
+            return field.slice(0, field.indexOf('.'));
+        }
+        return field;
+    },
+
+    /*_________________________________________________________________
+       * Description:
+       * Parameters:
+       * Returns:
+       ________________________________________________________________*/
+    evaulateScript: function(fieldMappingGr, triggerRecord) {
+        var ge = new GlideScopedEvaluator();
+        ge.putVariable("fieldMappingGr", fieldMappingGr);
+        ge.putVariable("triggerRecord", triggerRecord);
+        ge.evaluateScript(fieldMappingGr, "script"); // Run the script
+        ge.getVariable("answer");
+
+        if (typeof answer == "undefined") {
+            gs.addErrorMessage('answer variable not defined');
+            return;
+        }
+        return answer;
+
+    },
+
+
+    /*_________________________________________________________________
+       * Description:
+       * Parameters:
+       * Returns:
+       ________________________________________________________________*/
+    getLocalField: function(fieldMapping, triggerRecord) {
+        if (fieldMapping.use_proccessing_script == true) {
+            return this.evaulateScript(fieldMapping, triggerRecord);
+        }
+        var fieldType = triggerRecord.getElement(fieldMapping.local_field).getED().getInternalType();
+        if (fieldType == 'journal_input') {
+            return triggerRecord[[fieldMapping.local_field]].getJournalEntry(1);
+        }
+
+        return triggerRecord.getElement(fieldMapping.local_field).toString();
+
+    },
+
+
+
+    type: 'TransactionHandler'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-11 10:43:27</sys_created_on>
+        <sys_id>613d9f7d93357910327d718efaba10a7</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>TransactionHandler</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_script_include_613d9f7d93357910327d718efaba10a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-18 15:07:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

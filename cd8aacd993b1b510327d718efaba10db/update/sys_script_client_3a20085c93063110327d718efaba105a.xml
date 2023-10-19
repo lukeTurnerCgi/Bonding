@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>use_proccessing_script</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Set default script</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === 'false') {
+        return;
+    }
+
+
+    var inbound_outbound = g_form.getValue('integration_type.inbound_outbound');
+    var script = '';
+    if (inbound_outbound.indexOf('outbound') > -1) {
+        script = template_outbound;
+    }
+    if (inbound_outbound.indexOf('inbound') > -1) {
+        script = template_inbound;
+    }
+    g_form.setValue('script', script);
+
+
+}
+
+var template_outbound = "(function executeRule(fieldMappingGr, triggerRecord) {\r\n	// Add your code here\r\n })(fieldMappingGr, triggerRecord);";
+var template_inbound = "(function executeRule(payload,fieldMappingGr, targetRecord) {\r\n	// Add your code here\r\n })(fieldMappingGr, triggerRecord);";]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-18 13:02:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3a20085c93063110327d718efaba105a</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Set default script</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_script_client_3a20085c93063110327d718efaba105a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-18 13:12:44</sys_updated_on>
+        <table>x_324813_ebonding_integration_field_mappings</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
