@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_form_sections form_id="94239c5e93b9b910327d718efaba1091" sys_domain="global" table="x_324813_ebonding_transaction_type" version="3">
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>0</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-10-12 09:16:19</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>1c239c5e93b9b910327d718efaba1094</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_324813_ebonding_transaction_type" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">94239c5e93b9b910327d718efaba1091</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">0e5d7fb193f57910327d718efaba109e</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-10-12 09:16:19</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-10-12 12:32:29</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>7d00059293bdb910327d718efaba1000</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_324813_ebonding_transaction_type" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">94239c5e93b9b910327d718efaba1091</sys_ui_form>
-            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">fd00c19293bdb910327d718efaba10fe</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-10-12 12:32:29</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_324813_ebonding_transaction_type</name>
             <roles/>

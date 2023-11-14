@@ -47,7 +47,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-12 09:12:06</sys_created_on>
-        <sys_id>3e22d41e93b9b910327d718efaba10cd</sys_id>
         <sys_name>Inbound/Outbound</sys_name>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>

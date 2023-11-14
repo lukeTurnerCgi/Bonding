@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>vwbentleyRequest</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Bentley [ vwbentleyRequest ]</qualified_name>
+        <rest_endpoint>https://cgiukdev.service-now.com/api/cgiu4/remedy/ServiceRequest</rest_endpoint>
+        <rest_message display_value="Bentley">3858bdb3937db510327d718efaba1025</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-30 17:30:35</sys_created_on>
+        <sys_id>16b0b2441b52719036211138b04bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>vwbentleyRequest</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_rest_message_fn_16b0b2441b52719036211138b04bcb18</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-30 17:30:35</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

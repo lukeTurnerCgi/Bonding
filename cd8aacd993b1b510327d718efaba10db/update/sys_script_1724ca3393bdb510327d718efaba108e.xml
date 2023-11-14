@@ -16,7 +16,7 @@
         <description/>
         <execute_function>false</execute_function>
         <filter_condition table="incident">correlation_idISEMPTY^assignment_group=12a586cd0bb23200ecfd818393673a30^active=true^EQ<item endquery="false" field="correlation_id" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
-            <item display_table="sys_user_group" display_value="Incident Management" endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="12a586cd0bb23200ecfd818393673a30"/>
+            <item endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="12a586cd0bb23200ecfd818393673a30"/>
             <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
@@ -36,11 +36,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-17 09:21:07</sys_created_on>
         <sys_domain>11defdbb937db510327d718efaba10d0</sys_domain>
-        <sys_domain_path>!!#/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>1724ca3393bdb510327d718efaba108e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Create outbound-notify transaction</sys_name>
-        <sys_overrides display_value="Create outbound-notify transaction">86b171a293717110327d718efaba1032</sys_overrides>
+        <sys_overrides/>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>
         <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_parameters">
+    <sys_soap_message_parameters action="INSERT_OR_UPDATE">
+        <name>raised_for_phone</name>
+        <soap_function display_value="outbound-new">f36b5d921bd2351036211138b04bcba5</soap_function>
+        <sys_class_name>sys_soap_message_parameters</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-06 11:10:10</sys_created_on>
+        <sys_id>efec9d161bd2351036211138b04bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>raised_for_phone</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_soap_message_parameters_efec9d161bd2351036211138b04bcba3</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-06 11:10:10</sys_updated_on>
+        <type>string</type>
+        <value/>
+    </sys_soap_message_parameters>
+</record_update>

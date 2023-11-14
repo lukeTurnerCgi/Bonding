@@ -53,20 +53,11 @@ for(option in options){
         newIntegChoice.remote_choice = options[option].value;
         newIntegChoice.insert();
     }
+}
 
-	var checkOutIntegChoice = new GlideRecord('x_324813_ebonding_outbound_choice_mapping');
-    checkOutIntegChoice.addQuery('local_choice',options[option].value);
-    checkOutIntegChoice.addQuery('field_mapping',current.getUniqueValue());
-    checkOutIntegChoice.setLimit(1);
-    checkOutIntegChoice.query();
-    if(!checkOutIntegChoice.hasNext()){
-        var newIntegChoice = new GlideRecord('x_324813_ebonding_outbound_choice_mapping');
-        newIntegChoice.newRecord();
-        newIntegChoice.field_mapping = current.getUniqueValue();
-        newIntegChoice.local_choice = options[option].value;
-        newIntegChoice.remote_choice = options[option].value;
-        newIntegChoice.insert();
-    }
+if (typeof(window) == 'undefined') {
+    current.update();
+    action.setRedirectURL(current);
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -78,15 +69,15 @@ for(option in options){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>40a78ed993b9b510327d718efaba1051</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Create Default Mappings</sys_name>
         <sys_overrides/>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>
         <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
         <sys_update_name>sys_ui_action_40a78ed993b9b510327d718efaba1051</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-12 08:46:44</sys_updated_on>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-25 09:49:41</sys_updated_on>
         <table>x_324813_ebonding_integration_field_mappings</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

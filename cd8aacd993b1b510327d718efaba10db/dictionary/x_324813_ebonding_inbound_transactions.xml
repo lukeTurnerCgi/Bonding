@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d53f3ef593b17910327d718efaba10fc" label="Inbound Transactions" max_length="40" name="x_324813_ebonding_inbound_transactions" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Error Info" max_length="4000" name="error_info" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Payload" max_length="4000" name="payload" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="New"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="In Progress"/>
+                <element inactive_on_update="false" label="Proccessed" sequence="2" value="Proccessed"/>
+                <element inactive_on_update="false" label="Error" sequence="3" value="Error"/>
+            </choice>
+        </element>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Target record" max_length="32" name="target_record" reference="task" type="reference"/>
+        <element label="XML Payload" max_length="4000" name="xml_payload" type="xml"/>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
+        </index>
+        <index name="index3">
+            <element name="target_record"/>
+        </index>
+    </element>
+</database>

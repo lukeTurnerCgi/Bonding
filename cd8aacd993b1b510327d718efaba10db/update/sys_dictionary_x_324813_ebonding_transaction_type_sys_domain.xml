@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="sys_domain" table="x_324813_ebonding_transaction_type">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-13 14:53:37</sys_created_on>
-        <sys_id>8bd9262693757110327d718efaba1029</sys_id>
         <sys_name>Domain</sys_name>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>

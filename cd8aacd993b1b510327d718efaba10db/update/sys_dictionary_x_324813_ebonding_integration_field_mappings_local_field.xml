@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="local_field" table="x_324813_ebonding_integration_field_mappings">
         <active>true</active>
         <array>false</array>
-        <attributes>allow_references=true</attributes>
+        <attributes>allow_references=true,edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-09 14:05:58</sys_created_on>
-        <sys_id>cab7b9559379b510327d718efaba10a0</sys_id>
         <sys_name>Local Field</sys_name>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>

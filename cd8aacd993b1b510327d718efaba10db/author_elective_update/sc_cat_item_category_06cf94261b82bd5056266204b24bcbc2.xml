@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="3rd Party Request">e8fe90e21b82bd5056266204b24bcb52</sc_cat_item>
+        <sc_category display_value="Technical Services">60fe67ed979b6510f4b7355e6253af83</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com_orig</sys_created_by>
+        <sys_created_on>2023-10-25 15:05:46</sys_created_on>
+        <sys_id>06cf94261b82bd5056266204b24bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Services.3rd Party Request</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sc_cat_item_category_06cf94261b82bd5056266204b24bcbc2</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com_orig</sys_updated_by>
+        <sys_updated_on>2023-10-25 15:05:46</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sc_cat_item_category_06cf94261b82bd5056266204b24bcbc2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="3rd Party Request">e8fe90e21b82bd5056266204b24bcb52</sc_cat_item><sc_category display_value="Technical Services">60fe67ed979b6510f4b7355e6253af83</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>luke.turner@cgi.com_orig</sys_created_by><sys_created_on>2023-10-25 15:05:46</sys_created_on><sys_id>06cf94261b82bd5056266204b24bcbc2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Technical Services.3rd Party Request</sys_name><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>sc_cat_item_category_06cf94261b82bd5056266204b24bcbc2</sys_update_name><sys_updated_by>luke.turner@cgi.com_orig</sys_updated_by><sys_updated_on>2023-10-25 15:05:46</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-445705219</payload_hash>
+        <record_name>Technical Services.3rd Party Request</record_name>
+        <reverted_from/>
+        <source>dae09da41bc2bd1036211138b04bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com_orig</sys_created_by>
+        <sys_created_on>2023-10-25 15:05:46</sys_created_on>
+        <sys_id>86cf94261b82bd5056266204b24bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b675ec6550000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com_orig</sys_updated_by>
+        <sys_updated_on>2023-10-25 15:05:46</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>8acf94267482bd50c7f1137b0abd6fc5</update_guid>
+        <update_guid_history>8acf94267482bd50c7f1137b0abd6fc5:-445705219</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Technical Services.3rd Party Request">5c4b94fe1b4e795036211138b04bcb33</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-26 09:24:28</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>a1a5035c379147a3a1a54b5a65204749</sys_id>
+        <sys_metadata>06cf94261b82bd5056266204b24bcbc2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Services.3rd Party Request</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_06cf94261b82bd5056266204b24bcbc2</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_06cf94261b82bd5056266204b24bcbc2">86cf94261b82bd5056266204b24bcbc6</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-26 09:24:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

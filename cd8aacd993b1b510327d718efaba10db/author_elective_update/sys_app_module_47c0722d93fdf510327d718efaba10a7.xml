@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>false</active>
+        <application display_value="ebonding">2a7ca41993f1b510327d718efaba100b</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Outbound choice mappings</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_324813_ebonding_outbound_choice_mapping</name>
+        <order>700</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>admin</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-10 12:49:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>47c0722d93fdf510327d718efaba10a7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Outbound choice mappings</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_app_module_47c0722d93fdf510327d718efaba10a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-13 14:49:17</sys_updated_on>
+        <timeline_page/>
+        <title>Outbound choice mappings</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_app_module_47c0722d93fdf510327d718efaba10a7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>false</active><application display_value="ebonding">2a7ca41993f1b510327d718efaba100b</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Outbound choice mappings</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_324813_ebonding_outbound_choice_mapping</name><order>700</order><override_menu_roles>false</override_menu_roles><query/><report/><roles>admin</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-10 12:49:44</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>47c0722d93fdf510327d718efaba10a7</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Outbound choice mappings</sys_name><sys_overrides/><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>sys_app_module_47c0722d93fdf510327d718efaba10a7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-10-13 14:49:17</sys_updated_on><timeline_page/><title>Outbound choice mappings</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1309795709</payload_hash>
+        <record_name>Outbound choice mappings</record_name>
+        <reverted_from/>
+        <source>5def45241bc2bd1036211138b04bcb2c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-19 13:28:47</sys_created_on>
+        <sys_id>ba0015641bc2bd1036211138b04bcb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b481fd4700000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-19 13:28:47</sys_updated_on>
+        <type>Module</type>
+        <update_guid>1be8aaa283757110c08747652efe3053</update_guid>
+        <update_guid_history>1be8aaa283757110c08747652efe3053:-1309795709,6ad86ea27d7571108deb02edf6c58e0f:-1379837040,ce113a2ddafdf51040a80bcd1e02e49b:-1356033871,03c0722dd2fdf5100d15d96649fd50a9:1128027229,03c0722dd2fdf5100d15d96649fd50a9:1128027229</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Outbound choice mappings">1ea697521bca7d5056266204b24bcb60</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-25 09:46:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>44f5fd70a1bc43aa8eee8421eec9bb84</sys_id>
+        <sys_metadata>47c0722d93fdf510327d718efaba10a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Outbound choice mappings</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_app_module_47c0722d93fdf510327d718efaba10a7</sys_update_name>
+        <sys_update_version display_value="sys_app_module_47c0722d93fdf510327d718efaba10a7">ba0015641bc2bd1036211138b04bcb8e</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-25 09:46:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

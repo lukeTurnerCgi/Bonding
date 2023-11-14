@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>transaction_code</element>
-            <list_id display_value="x_324813_ebonding_transaction_type" element="NULL" name="x_324813_ebonding_transaction_type" parent="NULL" relationship="NULL" sys_domain="global" view="d544d0739d113110d0adc2c97a14b88d">630a556693fd3110327d718efaba103d</list_id>
+            <list_id display_value="x_324813_ebonding_transaction_type" element="NULL" name="x_324813_ebonding_transaction_type" parent="NULL" relationship="NULL" sys_domain="global" view="d9a8e0601b10311036211138b04bcb7a">630a556693fd3110327d718efaba103d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>inbound_outbound</element>
-            <list_id display_value="x_324813_ebonding_transaction_type" element="NULL" name="x_324813_ebonding_transaction_type" parent="NULL" relationship="NULL" sys_domain="global" view="d544d0739d113110d0adc2c97a14b88d">630a556693fd3110327d718efaba103d</list_id>
+            <list_id display_value="x_324813_ebonding_transaction_type" element="NULL" name="x_324813_ebonding_transaction_type" parent="NULL" relationship="NULL" sys_domain="global" view="d9a8e0601b10311036211138b04bcb7a">630a556693fd3110327d718efaba103d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>integration_type</element>
-            <list_id display_value="x_324813_ebonding_transaction_type" element="NULL" name="x_324813_ebonding_transaction_type" parent="NULL" relationship="NULL" sys_domain="global" view="d544d0739d113110d0adc2c97a14b88d">630a556693fd3110327d718efaba103d</list_id>
+            <list_id display_value="x_324813_ebonding_transaction_type" element="NULL" name="x_324813_ebonding_transaction_type" parent="NULL" relationship="NULL" sys_domain="global" view="d9a8e0601b10311036211138b04bcb7a">630a556693fd3110327d718efaba103d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -70,7 +70,7 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2023-10-13 09:04:41</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">d544d0739d113110d0adc2c97a14b88d</view>
+            <view display_value="Reference List" name="sys_ref_list">d9a8e0601b10311036211138b04bcb7a</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

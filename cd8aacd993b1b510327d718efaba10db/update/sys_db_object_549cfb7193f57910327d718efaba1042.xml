@@ -22,16 +22,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-11 13:00:23</sys_created_on>
         <sys_id>549cfb7193f57910327d718efaba1042</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Transaction Type</sys_name>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>
         <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
         <sys_update_name>sys_db_object_549cfb7193f57910327d718efaba1042</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-11 13:00:23</sys_updated_on>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 15:42:29</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_324813_ebonding.transaction_type_user" name="x_324813_ebonding.transaction_type_user">2cdc3b7193f57910327d718efaba107d</user_role>
+        <user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

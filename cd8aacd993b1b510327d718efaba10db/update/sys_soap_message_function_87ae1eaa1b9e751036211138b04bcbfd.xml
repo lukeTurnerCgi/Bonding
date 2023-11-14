@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Admin">dd5600611b50f11056266204b24bcbdb</basic_auth_profile>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:x="http://www.service-now.com/x_324813_ebonding_Inbound_transaction"&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+	&lt;x:execute&gt;&#13;
+				&lt;Message&gt;&#13;
+					&lt;MessageHeader&gt;&#13;
+						&lt;TransactionCode&gt;inbound-new&lt;/TransactionCode&gt;&#13;
+						&lt;SourceIncidentNumber&gt;INC0275583&lt;/SourceIncidentNumber&gt;&#13;
+						&lt;MessageSequenceID&gt;2c0ad6511b5a315039bd43f6dc4bcb54&lt;/MessageSequenceID&gt;&#13;
+						&lt;SourceSystemName&gt;CPS ServiceNow&lt;/SourceSystemName&gt;&#13;
+						&lt;DestinationSystemName&gt;CGI SMI HUB&lt;/DestinationSystemName&gt;&#13;
+						&lt;MessageType&gt;Incident&lt;/MessageType&gt;&#13;
+						&lt;MessageCreationDateTime/&gt;&#13;
+					&lt;/MessageHeader&gt;&#13;
+					&lt;MessagePayload&gt;&#13;
+						&lt;IncidentDetails&gt;&#13;
+							&lt;Summary&gt;&#13;
+								&lt;![CDATA[CMS Classic- Application Error]]&gt;&#13;
+							&lt;/Summary&gt;&#13;
+							&lt;Description&gt;&#13;
+								&lt;![CDATA[Please can this task be deleted from CMS:Complete Review - 25.10.23Your information : Affected User : Lauren LookerContact Number : 0121 262 1404Site/Location : CPS - Birmingham Colmore GateArea/Directorate : WEST MIDLANDSSelect Device : M025177610657Device not available (tick this box if your issue involves an MFD &#150; you will be able to enter the equipment number in the field that appears below) : falsePlease enter Asset Number or Equipment Number : If we need to contact you, what is the best day/time? : 8am-4pmWhat is your issue/fault? : cms_wmsIs this issue specific to a case? : YesPlease type URN: : 20DY1283623Please select issue/fault Type : What are you having an issue with? : CMS ClassicArea of CMS : overview_tabMobile Extension Number : CPS Direct Phone Number : Which Browser are you using? (e.g. Google Chrome, Internet Explorer) : What are you having an issue with? : Personal or CPS broadband? : How are you connecting to the network? : Broadband supplier : What are you having an issue with? : Mobile Number : Mobile Number : Smartphone Serial Number : What are you having an issue with? : Full file path or drive name (E.g. P:\\Performance\...) : What are you having an issue with? : What are you having an issue with? : Application Name : What are you having an issue with? : Please provide full details of the issue/fault : Please can this task be deleted from CMS:Complete Review - 25.10.23Important: : ]]&gt;&#13;
+							&lt;/Description&gt;&#13;
+							&lt;Impact&gt;4-Minor/Localized&lt;/Impact&gt;&#13;
+							&lt;Urgency&gt;4-Low&lt;/Urgency&gt;&#13;
+							&lt;Priority&gt;Low&lt;/Priority&gt;&#13;
+							&lt;ReportedDate/&gt;&#13;
+							&lt;ReportedSource&gt;Other&lt;/ReportedSource&gt;&#13;
+							&lt;AttachmentName1/&gt;&#13;
+							&lt;AttachmentContent1/&gt;&#13;
+							&lt;IncidentSite&gt;CPS - Birmingham Colmore Gate&lt;/IncidentSite&gt;&#13;
+							&lt;ConfigItem&gt;M025177610657&lt;/ConfigItem&gt;&#13;
+						&lt;/IncidentDetails&gt;&#13;
+						&lt;IncidentCategorization&gt;&#13;
+							&lt;Company&gt;Crown Prosecution Service&lt;/Company&gt;&#13;
+							&lt;ServiceType&gt;&#13;
+								&lt;![CDATA[User Service Restoration]]&gt;&#13;
+							&lt;/ServiceType&gt;&#13;
+							&lt;OperationalCategorization1&gt;Functionality&lt;/OperationalCategorization1&gt;&#13;
+							&lt;OperationalCategorization2&gt;Error&lt;/OperationalCategorization2&gt;&#13;
+							&lt;ProductName&gt;&#13;
+								&lt;![CDATA[CMS Classic]]&gt;&#13;
+							&lt;/ProductName&gt;&#13;
+							&lt;Service&gt;&#13;
+								&lt;![CDATA[Application Management]]&gt;&#13;
+							&lt;/Service&gt;&#13;
+						&lt;/IncidentCategorization&gt;&#13;
+						&lt;IncidentAssignment&gt;&#13;
+							&lt;SupportGroup&gt;&#13;
+								&lt;![CDATA[A&amp;H Application Support]]&gt;&#13;
+							&lt;/SupportGroup&gt;&#13;
+						&lt;/IncidentAssignment&gt;&#13;
+						&lt;RequesterDetails&gt;&#13;
+							&lt;StaffID&gt;Lauren.Looker@cps.gov.uk&lt;/StaffID&gt;&#13;
+							&lt;FirstName&gt;Lauren&lt;/FirstName&gt;&#13;
+							&lt;LastName&gt;Looker&lt;/LastName&gt;&#13;
+							&lt;EmailAddress&gt;Lauren.Looker@cps.gov.uk&lt;/EmailAddress&gt;&#13;
+							&lt;Department&gt;WEST MIDLANDS&lt;/Department&gt;&#13;
+							&lt;PhoneNumber&gt;0121 262 1404&lt;/PhoneNumber&gt;&#13;
+							&lt;Site/&gt;&#13;
+						&lt;/RequesterDetails&gt;&#13;
+					&lt;/MessagePayload&gt;&#13;
+				&lt;/Message&gt;&#13;
+		&lt;/x:execute&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</envelope>
+        <function_name>execute4</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>test outbound SOAP [ execute4 ]</qualified_name>
+        <soap_action/>
+        <soap_endpoint>https://snowdondev.service-now.com/x_324813_ebonding_Inbound_transaction.do?SOAP</soap_endpoint>
+        <soap_message display_value="test outbound SOAP">8cba6b601b12359036211138b04bcbcf</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-07 10:38:07</sys_created_on>
+        <sys_id>87ae1eaa1b9e751036211138b04bcbfd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>execute4</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_soap_message_function_87ae1eaa1b9e751036211138b04bcbfd</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-07 10:39:31</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

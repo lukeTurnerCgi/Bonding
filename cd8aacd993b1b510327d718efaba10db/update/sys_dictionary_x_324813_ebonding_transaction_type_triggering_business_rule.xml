@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="triggering_business_rule" table="x_324813_ebonding_transaction_type">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true,encode_utf8=false</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-12 12:28:24</sys_created_on>
-        <sys_id>defe301293bdb910327d718efaba10d1</sys_id>
         <sys_name>Triggering business rule</sys_name>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>

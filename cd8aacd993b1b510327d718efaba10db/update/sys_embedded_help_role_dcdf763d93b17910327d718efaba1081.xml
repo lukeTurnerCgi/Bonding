@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
     <sys_embedded_help_role action="INSERT_OR_UPDATE">
         <order>1000</order>
-        <role display_value="x_324813_ebonding.inbound_transactions_user" name="x_324813_ebonding.inbound_transactions_user">1cdf763d93b17910327d718efaba107e</role>
+        <role/>
         <sys_class_name>sys_embedded_help_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-11 08:33:50</sys_created_on>

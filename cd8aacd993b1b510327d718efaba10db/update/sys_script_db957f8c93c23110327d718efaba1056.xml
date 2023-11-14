@@ -36,7 +36,7 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-18 12:15:13</sys_created_on>
         <sys_domain>11defdbb937db510327d718efaba10d0</sys_domain>
-        <sys_domain_path>!!#/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>db957f8c93c23110327d718efaba1056</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Create outbound-reassigned transaction</sys_name>

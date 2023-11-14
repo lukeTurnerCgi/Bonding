@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Data Lookup and Record Matching Support" source="com.glide.data_lookup">a0be6c601bd0311036211138b04bcbf0</dependency>
+        <min_version>1.0.6</min_version>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-06 09:15:19</sys_created_on>
+        <sys_id>dda205121b52351036211138b04bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-06 09:15:19</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

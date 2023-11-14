@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Admin">dd5600611b50f11056266204b24bcbdb</basic_auth_profile>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:x="http://www.service-now.com/x_324813_ebonding_Inbound_transaction">
+	<soapenv:Body>
+	<x:execute>
+		<Message>
+			<MessageHeader>
+				<TransactionCode>Update</TransactionCode>
+				<TransactionType>Worklog</TransactionType>
+				<SourceSystemName>Computacenter SmtsV3</SourceSystemName>
+				<TargetSystemName>LOGICA SMI HUB</TargetSystemName>
+				<MessageCreationTime>27/10/2023 16:15:15</MessageCreationTime>
+				<SystemType>IncidentManagement</SystemType>
+			</MessageHeader>
+			<MessageBody>
+				<IncidentId>INCREQUK0013559540</IncidentId>
+				<ThirdPartyRef>INC000027526377</ThirdPartyRef>
+				<TicketCreationDateTime>27/10/2023 16:15:15</TicketCreationDateTime>
+				<ErrorDescription/>
+				<WorklogDateTime>27/10/2023 16:15:11</WorklogDateTime>
+				<WorklogType>External System</WorklogType>
+				<WorklogSummary>ITSM worklog update</WorklogSummary>
+				<WorklogDescription>Passed to CGI Service Desk</WorklogDescription>
+				<LogicaCompany>Logica UK Limited</LogicaCompany>
+			</MessageBody>
+		</Message>
+		</x:execute>
+    </soapenv:Body>
+</soapenv:Envelope>]]></envelope>
+        <function_name>execute2</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>test outbound SOAP [ execute2 ]</qualified_name>
+        <soap_action>http://www.service-now.com/x_324813_ebonding_Inbound_transaction/execute</soap_action>
+        <soap_endpoint>https://snowdondev.service-now.com/x_324813_ebonding_Inbound_transaction.do?SOAP</soap_endpoint>
+        <soap_message display_value="test outbound SOAP">8cba6b601b12359036211138b04bcbcf</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-01 11:45:50</sys_created_on>
+        <sys_id>2d2573e01b52359036211138b04bcbc4</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>execute2</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_soap_message_function_2d2573e01b52359036211138b04bcbc4</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-01 12:06:49</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

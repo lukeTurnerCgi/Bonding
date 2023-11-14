@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="e61e494b1b65f1104fe9eb14b24bcbe9" table="sysevent_script_action">
+    <sysevent_script_action action="DELETE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_324813_ebonding.inbound.request</event_name>
+        <name>Proccess New Request</name>
+        <order>100</order>
+        <script><![CDATA[   var payload = JSON.parse(current.payload);
+
+   gs.info('testing');
+
+   var scTaskGr = new GlideRecord('sc_task');
+   gs.info('request_id: ' + payload.request_id);
+   scTaskGr.addQuery('request', payload.request_id);
+   scTaskGr.setLimit(1);
+   scTaskGr.query();
+   if (scTaskGr.next()) {
+       payload.correlation_id = scTaskGr.getUniqueValue();
+       gs.info('correlation_id: ' + scTaskGr.getUniqueValue());
+       current.payload = JSON.stringify(payload);
+       current.update();
+
+       new TransactionHandler().proccessInboundTransaction(current);
+   }]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-30 10:16:19</sys_created_on>
+        <sys_domain>e61e494b1b65f1104fe9eb14b24bcbe9</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/!!]/</sys_domain_path>
+        <sys_id>eb1c85481b1a319036211138b04bcb3e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Proccess New Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sysevent_script_action_eb1c85481b1a319036211138b04bcb3e</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-30 15:55:53</sys_updated_on>
+    </sysevent_script_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sysevent_script_action_eb1c85481b1a319036211138b04bcb3e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="e61e494b1b65f1104fe9eb14b24bcbe9" table="sysevent_script_action"&gt;&lt;sysevent_script_action action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;condition_script/&gt;&lt;description/&gt;&lt;event_name&gt;x_324813_ebonding.inbound.request&lt;/event_name&gt;&lt;name&gt;Proccess New Request&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[   var payload = JSON.parse(current.payload);
+
+   gs.info('testing');
+
+   var scTaskGr = new GlideRecord('sc_task');
+   gs.info('request_id: ' + payload.request_id);
+   scTaskGr.addQuery('request', payload.request_id);
+   scTaskGr.setLimit(1);
+   scTaskGr.query();
+   if (scTaskGr.next()) {
+       payload.correlation_id = scTaskGr.getUniqueValue();
+       gs.info('correlation_id: ' + scTaskGr.getUniqueValue());
+       current.payload = JSON.stringify(payload);
+       current.update();
+
+       new TransactionHandler().proccessInboundTransaction(current);
+   }]]&gt;&lt;/script&gt;&lt;synchronous&gt;false&lt;/synchronous&gt;&lt;sys_class_name&gt;sysevent_script_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;luke.turner@cgi.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-10-30 10:16:19&lt;/sys_created_on&gt;&lt;sys_domain&gt;e61e494b1b65f1104fe9eb14b24bcbe9&lt;/sys_domain&gt;&lt;sys_domain_path&gt;!!!/!!&amp;amp;/!!]/&lt;/sys_domain_path&gt;&lt;sys_id&gt;eb1c85481b1a319036211138b04bcb3e&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Proccess New Request&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="ebonding" source="x_324813_ebonding"&gt;cd8aacd993b1b510327d718efaba10db&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ebonding"&gt;cd8aacd993b1b510327d718efaba10db&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_script_action_eb1c85481b1a319036211138b04bcb3e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;luke.turner@cgi.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-10-30 15:55:53&lt;/sys_updated_on&gt;&lt;/sysevent_script_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>736147458</payload_hash>
+        <record_name>Proccess New Request</record_name>
+        <reverted_from/>
+        <source>dae09da41bc2bd1036211138b04bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-30 15:55:53</sys_created_on>
+        <sys_id>8d3b16801bde319036211138b04bcbcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b814c76980000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-30 15:55:53</sys_updated_on>
+        <type>Script Action</type>
+        <update_guid>413b168068de319041836914064f0fcb</update_guid>
+        <update_guid_history>413b168068de319041836914064f0fcb:736147458,0d165d84795a3190661cac0d60fd5864:1091748685,b1555984ef5a3190ccf5ab45ff58c04c:-400857011,5b145104515a3190c1c4228af49f1458:-535274630,a2b311040a5a3190024a5d6d6a877e4b:1323612553,2062d5ccb31a31906848bb9248878510:-1189500305,c78d05c8dd1a319076fe19ff8075f4c3:2032838158,be7d05889b1a31905567376457b9dbce:-584147655</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-10 15:39:09</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_script_action">sysevent_script_action</sys_db_object>
+        <sys_id>1f92f3fa2c294580931d51d481fa4e10</sys_id>
+        <sys_metadata>eb1c85481b1a319036211138b04bcb3e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Proccess New Request</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sysevent_script_action_eb1c85481b1a319036211138b04bcb3e</sys_update_name>
+        <sys_update_version display_value="sysevent_script_action_eb1c85481b1a319036211138b04bcb3e">8d3b16801bde319036211138b04bcbcb</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 15:39:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

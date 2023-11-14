@@ -11,56 +11,181 @@
 TransactionHandler.prototype = {
     initialize: function() {},
     /*_________________________________________________________________
-       * Description:
-       * Parameters:
-       * Returns:
+       * Description: matches the inbound transaction record to the associated integration type and translates it to something recognised by the target record which is either created or updated based on the transaction type
+       * Parameters: transactionGr{glideRecord}
+       * Returns: NULL
        ________________________________________________________________*/
     proccessInboundTransaction: function(transactionGr) {
+        try {
+            transactionGr.state = 'In Progress';
+            transactionGr.update();//set the transaction record to in progress whilst it's being proccessed
+            var error = false;
+            var errorInfo = [];
+            var payload = JSON.parse(transactionGr.payload);
 
-        transactionGr.update();
-        var error = false;
-        var payload = JSON.parse(transactionGr.payload);
-        var integType = this.getIntegrationType(payload.case_type, payload.company);
-		var transactionType = this.getTransactionType(payload.transaction_code, integType.getUniqueValue());
-
-        var targetRecord = new GlideRecord(integType.table);
-        var update = false;
-        if (targetRecord.get('number', payload.correlation_id)) {
-            update = true;
-        } else if (transactionType.transaction_code == 'inbound-new') {
-            targetRecord.newRecord();
-        }
-        
-        var output = this.convertInboundPayload(payload, transactionType.getUniqueValue(),targetRecord);
-
-        for (var field in output) {
-            var fieldType = targetRecord.getElement(field).getED().getInternalType();
-            if (fieldType == 'reference') {
-                targetRecord[field].setDisplayValue(output[field]);
-            } else {
-                targetRecord[field] = output[field];
+            var integType = this.getIntegrationType(payload.case_type, payload.company);//check for integration type record
+            if (gs.nil(integType) || !integType.isValidRecord()) {
+                error = true;
+                errorInfo.push('Integration Type not found');
+                this.evaluateError(transactionGr, error, errorInfo);
+                return;
             }
-        }
-        if (update && targetRecord.isValidRecord()) {
-            targetRecord.update();
-        } else {
-            targetRecord.insert();
+            var transactionType = this.getTransactionType(payload.transaction_code, integType.getUniqueValue());//check for transaction type record
+            if (gs.nil(transactionType) || !transactionType.isValidRecord()) {
+                error = true;
+                errorInfo.push('Transaction Type not found');
+                this.evaluateError(transactionGr, error, errorInfo);
+                return;
+            }
+            var targetRecord = new GlideRecord(integType.table);
+            var update = false;
+            if (targetRecord.get('number', payload.correlation_id)) {
+                update = true;
+            } else if (transactionType.transaction_code == 'inbound-new') {
+                if (integType.case_type == 'Request') {
+                    if (gs.nil(payload.request_id)) {
+                        this.createTPRequest(transactionGr, payload);
+                        return;
+                    }
+                } else {
+                    targetRecord.newRecord();
+                }
+            } else {
+                error = true;
+                errorInfo.push('Target record not found');
+                this.evaluateError(transactionGr, error, errorInfo);
+                return;
+            }
+
+            var output = this.convertInboundPayload(payload, transactionType.getUniqueValue(), targetRecord);
+
+            var missingFields = this.mandatoryCheck(output, transactionType.getUniqueValue());
+            if (missingFields.length > 0) {
+                error = true;
+                for (var missingField in missingFields) {
+                    errorInfo.push(missingFields[missingField] + ' is missing or empty');
+                }
+                this.evaluateError(transactionGr, error, errorInfo);
+                return;
+            }
+            for (var field in output) {
+                var fieldType = targetRecord.getElement(field).getED().getInternalType();
+                if (fieldType == 'reference') {
+                    targetRecord[field].setDisplayValue(output[field]);
+                } else {
+                    targetRecord[field] = output[field];
+                }
+            }
+
+            if (update && targetRecord.isValidRecord()) {
+                targetRecord.update();
+            } else {
+                targetRecord.insert();
+            }
+
+            this.runAfterPayloadScripts(transactionType, payload, output, targetRecord);
+            this.evaluateError(transactionGr, error, errorInfo, targetRecord);
+
+        } catch (e) {
+
+            gs.error(e.message);
+            transactionGr.state = 'Error';
+            transactionGr.error_info = e.message;
+            transactionGr.update();
+
         }
 
+    },
+
+    /*_________________________________________________________________
+       * Description:evaluates the error information collected and updates the transaction record accordingly
+       * Parameters: transactionGr {glideRecord}, error {bool}, errorInfo{array}, targetRecord{glideRecord}
+       * Returns: NULL
+       ________________________________________________________________*/
+    evaluateError: function(transactionGr, error, errorInfo, targetRecord) {
         if (error == false) {
             transactionGr.target_record = targetRecord.getUniqueValue();
+            transactionGr.error_info = '';
             transactionGr.state = 'Proccessed';
             transactionGr.update();
         } else {
             transactionGr.state = 'Error';
+            transactionGr.error_info = errorInfo.join('\n');
             transactionGr.update();
         }
     },
 
+
+
     /*_________________________________________________________________
-   * Description:
-   * Parameters:
-   * Returns:
+   * Description: Runs all of the after payload scripts for the associated transaction type
+   * Parameters:transactionType {glideRecord}, payload {object}, output {object}, targetRecord {glideRecord}
+   * Returns: NULL
+   ________________________________________________________________*/
+    runAfterPayloadScripts: function(transactionType, payload, output, targetRecord) {
+        var payLoadScript = new GlideRecord('x_324813_ebonding_payload_tranformation_script');
+        payLoadScript.addQuery('transaction_type', transactionType.getUniqueValue());
+        payLoadScript.addQuery('when', 'after');
+        payLoadScript.addQuery('active', true);
+        payLoadScript.query();
+        while (payLoadScript.next()) {
+            var ge = new GlideScopedEvaluator();
+            ge.putVariable("rawpayload", payload);
+            ge.putVariable("convertedPayload", output);
+            ge.putVariable("targetRecord", targetRecord);
+            ge.evaluateScript(payLoadScript, "script"); // Run the script
+        }
+    },
+
+    /*_________________________________________________________________
+   * Description:Creates a 3rd party request to be used to bond with external requests
+   * Parameters:transactionGr{glideRecord}, payload{object}
+   * Returns: NULL
+   ________________________________________________________________*/
+    createTPRequest: function(transactionGr, payload) {
+        var cart = new sn_sc.CartJS();
+        var item = {
+            'sysparm_id': '6107103a1b4e795036211138b04bcbf7',
+            'sysparm_quantity': '1',
+        };
+        cart.addToCart(item);
+        var checkoutInfo = cart.checkoutCart();
+        payload.request_id = checkoutInfo.request_id;
+        transactionGr.payload = JSON.stringify(payload);
+        transactionGr.update();
+
+        var when = new GlideDateTime();
+        var delay = new GlideTime();
+        delay.setValue("00:00:10");
+        when.add(delay);
+        gs.eventQueueScheduled("x_324813_ebonding.inbound.request", transactionGr, "", "", when);
+    },
+
+
+
+    /*_________________________________________________________________
+   * Description:Checks the translated output against the field mapping to check that all mandatory fields are present before updating the target record
+   * Parameters:output {object}, transactionTypeId {string}
+   * Returns: {array} array of string field which are missing
+   ________________________________________________________________*/
+    mandatoryCheck: function(output, transactionTypeId) {
+        var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
+        fieldMappings.addQuery('integration_type', transactionTypeId);
+        fieldMappings.addQuery('mandatory', true);
+        fieldMappings.query();
+        var missingFields = [];
+        while (fieldMappings.next()) {
+            if (!output.hasOwnProperty(fieldMappings.local_field) || gs.nil(output[fieldMappings.local_field])) {
+                missingFields.push(fieldMappings.local_field.toString());
+            }
+        }
+        return missingFields;
+    },
+
+    /*_________________________________________________________________
+   * Description:fetches the integration type record based on the case type and company
+   * Parameters:case_type {string}, company {string}
+   * Returns:{glideRecord} gliderecord of the integration type
    ________________________________________________________________*/
     getIntegrationType: function(case_type, company) {
         var integType = new GlideRecord('x_324813_ebonding_integration_type');
@@ -74,9 +199,9 @@ TransactionHandler.prototype = {
 
 
     /*_________________________________________________________________
-   * Description:
-   * Parameters:
-   * Returns:
+   * Description:fetches the transaction type record based on the integration type and transaction code
+   * Parameters:transaction_code {string}, integTypeId{string}
+   * Returns:{glideRecord} gliderecord of the transaction type
    ________________________________________________________________*/
     getTransactionType: function(transaction_code, integTypeId) {
         var transactionType = new GlideRecord('x_324813_ebonding_transaction_type');
@@ -91,44 +216,47 @@ TransactionHandler.prototype = {
 
 
     /*_________________________________________________________________
-   * Description:
-   * Parameters:
-   * Returns:
+   * Description: takes the payload that sent to us and translates it into a payload that is recognised by the target record by using the integration field mappings associated with the transaction type
+   * Parameters:payload {object}, transactionTypeId {string}, targetRecord {glideRecord}
+   * Returns: {object} the payload after its been converted
    ________________________________________________________________*/
-    convertInboundPayload: function(payload, transactionTypeId,targetRecord) {
+    convertInboundPayload: function(payload, transactionTypeId, targetRecord) {
         var convertedPayload = {};
-        for (var field in payload) {
-            var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
-            fieldMappings.addQuery('remote_field', field);
-            fieldMappings.addQuery('integration_type', transactionTypeId);
-            fieldMappings.query();
-            if (fieldMappings.next()) {
+
+        var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
+        fieldMappings.addQuery('integration_type', transactionTypeId);
+        fieldMappings.query();
+        while (fieldMappings.next()) {
+            if (payload.hasOwnProperty(fieldMappings.remote_field) && fieldMappings.use_proccessing_script == false) {
                 if (fieldMappings.choice_mappings_required == true) {
                     var choiceMapping = new GlideRecord('x_324813_ebonding_choice_mapping');
-                    choiceMapping.addQuery('remote_choice', payload[field]);
+                    choiceMapping.addQuery('remote_choice', payload[fieldMappings.remote_field]);
                     choiceMapping.addQuery('field_mapping', fieldMappings.getUniqueValue());
                     choiceMapping.query();
                     if (choiceMapping.next()) {
-                        convertedPayload[fieldMappings.local_field] = choiceMapping.getValue('local_choice');
+                        convertedPayload[fieldMappings.local_field] = choiceMapping.getValue('local_choice').toString();
                     }
-                } else if (fieldMappings.use_proccessing_script == true) {
-                    convertedPayload[fieldMappings.local_field] = this.evaulateInboundScript(payload, fieldMappings, targetRecord);
                 } else {
-                    convertedPayload[fieldMappings.local_field] = payload[field];
+                    convertedPayload[fieldMappings.local_field] = payload[fieldMappings.remote_field].toString();
                 }
+            } else if (fieldMappings.use_proccessing_script == true) {
+                convertedPayload[fieldMappings.local_field] = this.evaulateInboundScript(payload, fieldMappings, targetRecord);
             }
         }
+        //}
         return convertedPayload;
     },
 
+
+
     /*_________________________________________________________________
-       * Description:
-       * Parameters:
-       * Returns:
+       * Description: evaulates the script for inbound field mapping record
+       * Parameters:payload {object}, fieldMappingGr {glideRecord}, targetRecord {glideRecord}
+       * Returns:{string} the evaulated string based on the associated script
        ________________________________________________________________*/
     evaulateInboundScript: function(payload, fieldMappingGr, targetRecord) {
         var ge = new GlideScopedEvaluator();
-		ge.putVariable("payload", payload);
+        ge.putVariable("payload", payload);
         ge.putVariable("fieldMappingGr", fieldMappingGr);
         ge.putVariable("targetRecord", targetRecord);
         ge.evaluateScript(fieldMappingGr, "script"); // Run the script
@@ -143,9 +271,9 @@ TransactionHandler.prototype = {
     },
 
     /*_________________________________________________________________
-       * Description:
-       * Parameters:
-       * Returns:
+       * Description: creates the outbound transaction record to be proccessed, this is triggered by the business rules associated with the transaction type record
+       * Parameters:taskGr {glideRecord}, transactionTypeId {string}
+       * Returns:NULL
        ________________________________________________________________*/
     createOutboundTransaction: function(taskGr, transactionTypeId) {
         var transactionTypeGr = new GlideRecord('x_324813_ebonding_transaction_type');
@@ -159,26 +287,28 @@ TransactionHandler.prototype = {
             outboundTransaction.state = 'new';
             outboundTransaction.trigger_record = taskGr.getUniqueValue();
             outboundTransaction.transaction_type = transactionTypeId;
+            outboundTransaction.domain = taskGr.getValue('sys_domain');
             outboundTransaction.insert();
         }
+
     },
 
     /*_________________________________________________________________
-          * Description:
-          * Parameters:
-          * Returns:
+          * Description:creates the payload from the triggering record and the field integration field mapping to be populated in the outbound transaction record
+          * Parameters:transactionTypeGr {glideRecord}, transactionTypeId {string}, taskGr {glideRecord}
+          * Returns:{object} outbound payload
           ________________________________________________________________*/
     createOutboundPayload: function(transactionTypeGr, transactionTypeId, taskGr) {
 
         var payload = {};
-        payload.transaction_type = transactionTypeGr.getValue('transaction_code');
+        payload.transaction_code = transactionTypeGr.getValue('transaction_code');
 
         var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
         fieldMappings.addQuery('integration_type', transactionTypeId);
         fieldMappings.query();
         while (fieldMappings.next()) {
             var baseField = this.getBaseField(fieldMappings.local_field);
-            if (fieldMappings.mandatory == true || taskGr[baseField].changes() || fieldMappings.use_proccessing_script == true) {
+            if (fieldMappings.mandatory == true || (!gs.nil(baseField) && taskGr[baseField].changes()) || fieldMappings.use_proccessing_script == true) {
                 payload[fieldMappings.remote_field] = this.getLocalField(fieldMappings, taskGr);
             }
         }
@@ -188,11 +318,15 @@ TransactionHandler.prototype = {
     },
 
     /*_________________________________________________________________
-       * Description:
-       * Parameters:
-       * Returns:
+       * Description: gets the base field from dotwalked fields described by strings i.e field.name would return field.
+       * Parameters: field {string}
+       * Returns:{string} the base field
        ________________________________________________________________*/
     getBaseField: function(field) {
+        if (gs.nil(field)) {
+            return '';
+        }
+
         if (field.indexOf('.') != -1) {
             return field.slice(0, field.indexOf('.'));
         }
@@ -200,11 +334,11 @@ TransactionHandler.prototype = {
     },
 
     /*_________________________________________________________________
-       * Description:
-       * Parameters:
-       * Returns:
+       * Description: evaulates the outbound field mapping script
+       * Parameters: fieldMappingGr{glideRecord}, triggerRecord{glideRecord}
+       * Returns:{string} the answer evaulated from the script
        ________________________________________________________________*/
-    evaulateScript: function(fieldMappingGr, triggerRecord) {
+    evaulateOutboundScript: function(fieldMappingGr, triggerRecord) {
         var ge = new GlideScopedEvaluator();
         ge.putVariable("fieldMappingGr", fieldMappingGr);
         ge.putVariable("triggerRecord", triggerRecord);
@@ -221,23 +355,57 @@ TransactionHandler.prototype = {
 
 
     /*_________________________________________________________________
-       * Description:
-       * Parameters:
-       * Returns:
+       * Description: gets the field value associated with the fieldmapping record's localfield or script 
+       * Parameters:fieldMapping{glideRecord}, triggerRecord{glideRecord}
+       * Returns: the evaulated value for the local field from the trigger record
        ________________________________________________________________*/
     getLocalField: function(fieldMapping, triggerRecord) {
         if (fieldMapping.use_proccessing_script == true) {
-            return this.evaulateScript(fieldMapping, triggerRecord);
+            return this.evaulateOutboundScript(fieldMapping, triggerRecord);
         }
         var fieldType = triggerRecord.getElement(fieldMapping.local_field).getED().getInternalType();
         if (fieldType == 'journal_input') {
             return triggerRecord[[fieldMapping.local_field]].getJournalEntry(1);
+        }
+        if (fieldType == 'reference') {
+            return triggerRecord[[fieldMapping.local_field]].getDisplayValue();
+        }
+
+        if (fieldMapping.choice_mappings_required == true) {
+            var choiceMapping = new GlideRecord('x_324813_ebonding_choice_mapping');
+            choiceMapping.addQuery('local_choice', triggerRecord.getElement(fieldMapping.local_field).toString());
+            choiceMapping.addQuery('field_mapping', fieldMapping.getUniqueValue());
+            choiceMapping.query();
+            if (choiceMapping.next()) {
+                return choiceMapping.getValue('remote_choice').toString();
+            }
         }
 
         return triggerRecord.getElement(fieldMapping.local_field).toString();
 
     },
 
+    /*_________________________________________________________________
+       * Description: translates the associated attachment record into an object consisting of the attachment name and content in base64 and then pushes that to an array to be sent onto third party
+       * Parameters:sysId{string}
+       * Returns: {array} array of objects containing the attachment info
+       ________________________________________________________________*/
+    fetchFileBase64: function(sysId) {
+        var name = "";
+        var attachmentBase64 = "";
+        var arr = [];
+        var myObj = {};
+        var attachRec = new GlideRecord('sys_attachment');
+        if (attachRec.get(sysId)) {
+            var sa = new GlideSysAttachment();
+            attachmentBase64 = sa.getContentBase64(attachRec);
+            name = attachRec.file_name.toString();
+        }
+        myObj.attachment = attachmentBase64;
+        myObj.filename = name;
+        arr.push(myObj);
+        return arr;
+    },
 
 
     type: 'TransactionHandler'
@@ -246,13 +414,13 @@ TransactionHandler.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-11 10:43:27</sys_created_on>
         <sys_id>613d9f7d93357910327d718efaba10a7</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>TransactionHandler</sys_name>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
-        <sys_policy>read</sys_policy>
+        <sys_policy/>
         <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
         <sys_update_name>sys_script_include_613d9f7d93357910327d718efaba10a7</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-18 15:07:38</sys_updated_on>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 11:20:41</sys_updated_on>
     </sys_script_include>
 </record_update>

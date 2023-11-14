@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="DELETE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_324813_ebonding_outbound_choice_mapping</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-19 13:28:32</sys_created_on>
+        <sys_id>1fffcd241bc2bd1036211138b04bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_324813_ebonding_outbound_choice_mapping</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>ua_table_licensing_config_1fffcd241bc2bd1036211138b04bcb37</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-19 13:28:32</sys_updated_on>
+    </ua_table_licensing_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>ua_table_licensing_config_1fffcd241bc2bd1036211138b04bcb37</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config"><ua_table_licensing_config action="INSERT_OR_UPDATE"><is_fulfillment>false</is_fulfillment><license_condition/><license_model>none</license_model><license_roles/><name>x_324813_ebonding_outbound_choice_mapping</name><op_delete>true</op_delete><op_insert>true</op_insert><op_update>true</op_update><owner_condition/><sys_class_name>ua_table_licensing_config</sys_class_name><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-19 13:28:32</sys_created_on><sys_id>1fffcd241bc2bd1036211138b04bcb37</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_324813_ebonding_outbound_choice_mapping</sys_name><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>ua_table_licensing_config_1fffcd241bc2bd1036211138b04bcb37</sys_update_name><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-19 13:28:32</sys_updated_on></ua_table_licensing_config></record_update>]]></payload>
+        <payload_hash>-657453068</payload_hash>
+        <record_name>x_324813_ebonding_outbound_choice_mapping</record_name>
+        <reverted_from/>
+        <source>c7e978231b11311036211138b04bcbf1</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-09-21 12:46:49</sys_created_on>
+        <sys_id>111019641bc2bd1036211138b04bcbe8</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18ab7c756a80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Table Subscription Configuration</type>
+        <update_guid>dd10196402c2bd10b4e4a5338fed7de7</update_guid>
+        <update_guid_history>dd10196402c2bd10b4e4a5338fed7de7:-657453068</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-25 09:46:19</sys_created_on>
+        <sys_db_object display_value="" name="ua_table_licensing_config">ua_table_licensing_config</sys_db_object>
+        <sys_id>4f3d53dac1094cf1bde4621fd32094f1</sys_id>
+        <sys_metadata>1fffcd241bc2bd1036211138b04bcb37</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_324813_ebonding_outbound_choice_mapping</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>ua_table_licensing_config_1fffcd241bc2bd1036211138b04bcb37</sys_update_name>
+        <sys_update_version display_value="ua_table_licensing_config_1fffcd241bc2bd1036211138b04bcb37">111019641bc2bd1036211138b04bcbe8</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-25 09:46:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

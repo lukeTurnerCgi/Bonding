@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_324813_ebonding.inbound_transactions_user</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>inbound_transactions_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-11 08:33:50</sys_created_on>
+        <sys_id>1cdf763d93b17910327d718efaba107e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_324813_ebonding.inbound_transactions_user</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_user_role_1cdf763d93b17910327d718efaba107e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-11 08:33:50</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_user_role_1cdf763d93b17910327d718efaba107e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_324813_ebonding.inbound_transactions_user</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix>inbound_transactions_user</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-11 08:33:50</sys_created_on><sys_id>1cdf763d93b17910327d718efaba107e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_324813_ebonding.inbound_transactions_user</sys_name><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>sys_user_role_1cdf763d93b17910327d718efaba107e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-10-11 08:33:50</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>963475026</payload_hash>
+        <record_name>x_324813_ebonding.inbound_transactions_user</record_name>
+        <reverted_from/>
+        <source>5def45241bc2bd1036211138b04bcb2c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-19 13:28:57</sys_created_on>
+        <sys_id>111019641bc2bd1036211138b04bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b481ffb780000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-19 13:28:57</sys_updated_on>
+        <type>Role</type>
+        <update_guid>d4df763df5b17910b16abb48af03b183</update_guid>
+        <update_guid_history>d4df763df5b17910b16abb48af03b183:963475026</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_324813_ebonding.inbound_transactions_user">90318f6f1b9af91036211138b04bcbe4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-10 15:40:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>131b39ebf69c4fe68a73f949c9f9e739</sys_id>
+        <sys_metadata>1cdf763d93b17910327d718efaba107e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_324813_ebonding.inbound_transactions_user</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_user_role_1cdf763d93b17910327d718efaba107e</sys_update_name>
+        <sys_update_version display_value="sys_user_role_1cdf763d93b17910327d718efaba107e">111019641bc2bd1036211138b04bcbd9</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 15:40:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="11defdbb937db510327d718efaba10d0" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>script</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set default script</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+	var inbound_outbound = g_form.getValue('integration_type.inbound_outbound');
+    if (inbound_outbound.indexOf('outbound') > -1)
+        script = template_outbound;
+    if (inbound_outbound.indexOf('inbound') > -1)
+        script = template_inbound;
+
+    g_form.setValue('script', script);
+}
+
+var template_outbound = "(function executeRule(fieldMappingGr, triggerRecord) {\r\n	// Add your code here\r\n })(fieldMappingGr, triggerRecord);";
+var template_inbound = "(function executeRule(payload,fieldMappingGr, targetRecord) {\r\n	// Add your code here\r\n })(fieldMappingGr, triggerRecord);";]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-18 12:58:20</sys_created_on>
+        <sys_domain>11defdbb937db510327d718efaba10d0</sys_domain>
+        <sys_domain_path>!!#/</sys_domain_path>
+        <sys_id>b28d7b8893063110327d718efaba1016</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Set default script</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_script_client_b28d7b8893063110327d718efaba1016</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-18 12:59:30</sys_updated_on>
+        <table>x_324813_ebonding_integration_field_mappings</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_script_client_b28d7b8893063110327d718efaba1016</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="11defdbb937db510327d718efaba10d0" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;script&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Set default script&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+	var inbound_outbound = g_form.getValue('integration_type.inbound_outbound');
+    if (inbound_outbound.indexOf('outbound') &gt; -1)
+        script = template_outbound;
+    if (inbound_outbound.indexOf('inbound') &gt; -1)
+        script = template_inbound;
+
+    g_form.setValue('script', script);
+}
+
+var template_outbound = "(function executeRule(fieldMappingGr, triggerRecord) {\r\n	// Add your code here\r\n })(fieldMappingGr, triggerRecord);";
+var template_inbound = "(function executeRule(payload,fieldMappingGr, targetRecord) {\r\n	// Add your code here\r\n })(fieldMappingGr, triggerRecord);";]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-10-18 12:58:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;11defdbb937db510327d718efaba10d0&lt;/sys_domain&gt;&lt;sys_domain_path&gt;!!#/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b28d7b8893063110327d718efaba1016&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Set default script&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="ebonding" source="x_324813_ebonding"&gt;cd8aacd993b1b510327d718efaba10db&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ebonding"&gt;cd8aacd993b1b510327d718efaba10db&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_b28d7b8893063110327d718efaba1016&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-10-18 12:59:30&lt;/sys_updated_on&gt;&lt;table&gt;x_324813_ebonding_integration_field_mappings&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>146789732</payload_hash>
+        <record_name>Set default script</record_name>
+        <reverted_from/>
+        <source>5def45241bc2bd1036211138b04bcb2c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-19 13:28:51</sys_created_on>
+        <sys_id>bb0095641bc2bd1036211138b04bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b481fe3b40000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-19 13:28:51</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>77bfb34c06063110d3a05a92352d7109</update_guid>
+        <update_guid_history>77bfb34c06063110d3a05a92352d7109:146789732,de8fb34863063110f7bdabecbaf16fd8:1443203409,8f7fbf886e0631100c309df20e56d35c:-911322438</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-10 15:40:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>4ee74a884b9846a7a9e77770bbf96691</sys_id>
+        <sys_metadata>b28d7b8893063110327d718efaba1016</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set default script</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent display_value="Integration Field Mappings">39b7b9d59379b510327d718efaba10f9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_script_client_b28d7b8893063110327d718efaba1016</sys_update_name>
+        <sys_update_version display_value="sys_script_client_b28d7b8893063110327d718efaba1016">bb0095641bc2bd1036211138b04bcb02</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 15:40:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

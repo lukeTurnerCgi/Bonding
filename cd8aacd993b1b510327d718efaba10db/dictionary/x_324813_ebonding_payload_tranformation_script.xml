@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e291813d1bca795056266204b24bcb61" label="Payload Transformation script" max_length="40" name="x_324813_ebonding_payload_tranformation_script" type="collection">
+        <element label="active" max_length="40" name="active" type="boolean"/>
+        <element label="Name" mandatory="true" max_length="200" name="name" type="string"/>
+        <element label="script" max_length="8000" name="script" type="script"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="Transaction Type" max_length="32" name="transaction_type" reference="x_324813_ebonding_transaction_type" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="When" mandatory="true" max_length="40" name="when" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Before" sequence="0" value="before"/>
+                <element inactive_on_update="false" label="After" sequence="1" value="after"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
+        </index>
+        <index name="index3">
+            <element name="transaction_type"/>
+        </index>
+    </element>
+</database>

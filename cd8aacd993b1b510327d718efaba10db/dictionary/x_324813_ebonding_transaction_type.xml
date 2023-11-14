@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="549cfb7193f57910327d718efaba1042" label="Transaction Type" max_length="40" name="x_324813_ebonding_transaction_type" type="collection">
+        <element label="Condition string" max_length="40" name="condition_string" type="condition_string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Http Method" max_length="32" name="http_method" reference="sys_rest_message_fn" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="inbound" label="Inbound/Outbound" max_length="40" name="inbound_outbound" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Inbound" sequence="0" value="inbound"/>
+                <element inactive_on_update="false" label="Outbound" sequence="1" value="outbound"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Integration Type" max_length="32" name="integration_type" reference="x_324813_ebonding_integration_type" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,extended_operators=VALCHANGES;CHANGESFROM;CHANGESTO" dependent="integration_type.table" dependent_on_field="integration_type.table" label="Outbound trigger" max_length="4000" name="outbound_trigger" type="conditions" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Response transaction type" max_length="32" name="response_transaction_type" reference="x_324813_ebonding_transaction_type" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Response type" max_length="40" name="response_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Synchronous" sequence="0" value="synchronous"/>
+                <element inactive_on_update="false" label="Asynchronous" sequence="1" value="asynchronous"/>
+            </choice>
+        </element>
+        <element label="SOAP function" max_length="32" name="soap_function" reference="sys_soap_message_function" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element attributes="case_sensitive=true,edge_encryption_enabled=true" label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element display="true" label="Transaction code" max_length="40" name="transaction_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Triggering business rule" max_length="32" name="triggering_business_rule" reference="sys_script" type="reference"/>
+        <index name="index">
+            <element name="http_method"/>
+        </index>
+        <index name="index2">
+            <element name="integration_type"/>
+        </index>
+        <index name="index3">
+            <element name="response_transaction_type"/>
+        </index>
+        <index name="index4">
+            <element name="soap_function"/>
+        </index>
+        <index name="index5">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index6">
+            <element name="sys_domain_path"/>
+        </index>
+        <index name="index7">
+            <element name="triggering_business_rule"/>
+        </index>
+    </element>
+</database>

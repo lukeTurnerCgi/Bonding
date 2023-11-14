@@ -17,24 +17,24 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_324813_ebonding.inbound_transactions_user</roles>
+        <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-10-11 08:33:51</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2cdf763d93b17910327d718efaba10a5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Inbound transactions</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Inbound Transactions</sys_name>
         <sys_overrides/>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>
         <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
         <sys_update_name>sys_app_module_2cdf763d93b17910327d718efaba10a5</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-13 14:49:11</sys_updated_on>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 15:30:00</sys_updated_on>
         <timeline_page/>
-        <title>Inbound transactions</title>
+        <title>Inbound Transactions</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f5f875599379b510327d718efaba103c" label="Choice mapping" max_length="40" name="x_324813_ebonding_choice_mapping" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Field Mapping" max_length="32" name="field_mapping" reference="x_324813_ebonding_integration_field_mappings" type="reference"/>
+        <element choice_table="incident" display="true" label="Local Choice" max_length="40" name="local_choice" type="string"/>
+        <element label="Remote Choice" max_length="40" name="remote_choice" type="string"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <index name="index">
+            <element name="field_mapping"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index3">
+            <element name="sys_domain_path"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_web_service">
+    <sys_web_service action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <function_name>execute</function_name>
+        <name>Inbound_transaction</name>
+        <scoped_name>x_324813_ebonding_Inbound_transaction</scoped_name>
+        <script><![CDATA[(function scriptedWebServiceOperation(request, response) {
+
+    var jsonObj = gs.xmlToJSON(soapRequestXML);
+    var payload = flattenJSON(jsonObj, {}, "");
+    renameKey(payload, 'MessageType', 'case_type');
+    renameKey(payload, 'TransactionCode', 'transaction_code');
+    renameKey(payload, 'Company', 'company');
+
+    var inboundPayload = new GlideRecord('x_324813_ebonding_inbound_transactions');
+    inboundPayload.newRecord();
+    inboundPayload.xml_payload = soapRequestXML;
+    inboundPayload.payload = JSON.stringify(payload);
+    response.transactionID = inboundPayload.insert();
+
+    function renameKey(obj, old_key, new_key) {
+        //check if object contains old_key as a property
+        if (!obj.hasOwnProperty(old_key)) {
+            return;
+        }
+
+        // Check if old key = new key
+        if (old_key !== new_key) {
+
+            // Modify old key
+            Object.defineProperty(obj, new_key,
+
+                // Fetch description from object
+                Object.getOwnPropertyDescriptor(obj, old_key));
+
+            // Delete old key
+            delete obj[old_key];
+        }
+    }
+
+    function flattenJSON(obj, res, extraKey) {
+        for (key in obj) {
+            if (typeof obj[key] !== 'object') {
+                if(res.hasOwnProperty(key)){
+                    extraKey = findNextKey(res,key,2);
+                }
+                res[key + extraKey] = obj[key];
+            } else {
+                flattenJSON(obj[key], res, '');
+            }
+        }
+        return res;
+    }
+
+    function findNextKey(obj,key,keyNum){
+        if(obj.hasOwnProperty(key + keyNum)){
+            keyNum = findNextKey(obj,key,(keyNum + 1));
+        }
+        return keyNum;
+    }
+
+
+})(request, response);]]></script>
+        <short_description/>
+        <sys_class_name>sys_web_service</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-31 17:42:15</sys_created_on>
+        <sys_id>d4ec77981b1eb19036211138b04bcba3</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Inbound_transaction</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_web_service_d4ec77981b1eb19036211138b04bcba3</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-14 09:54:12</sys_updated_on>
+        <wsdl>https://snowdondev.service-now.com/x_324813_ebonding_Inbound_transaction.do?WSDL</wsdl>
+        <wsdl_compliance>false</wsdl_compliance>
+    </sys_web_service>
+</record_update>

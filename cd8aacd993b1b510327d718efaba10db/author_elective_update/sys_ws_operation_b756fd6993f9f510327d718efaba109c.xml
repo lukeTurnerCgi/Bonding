@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="DELETE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create incident</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var integType = new GlideRecord('x_324813_ebonding_integration_type');
+	integType.addQuery('table','incident');
+	integType.setLimit(1);
+	integType.query();
+	integType.next();
+
+	var output = {};
+	
+	for(var field in grJson) {
+		var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
+		fieldMappings.addQuery('remote_field',field);
+		fieldMappings.addQuery('integration_type',integType.getUniqueValue());
+		fieldMappings.addQuery('inbound',true);
+		fieldMappings.query();
+		if(fieldMappings.next()){
+			if(fieldMappings.choice_mappings_required == 'true'){
+				var choiceMapping = new GlideRecord('x_324813_ebonding_choice_mapping');
+				choiceMapping.addQuery('remote_choice',grJson[field]);
+				choiceMapping.addQuery('field_mapping',fieldMappings);
+				choiceMapping.query();
+				if(choiceMapping.next()){
+					output[fieldMappings.local_field] = choiceMapping.getValue('local_choice');
+				}
+			} else{
+			output[fieldMappings.local_field] = grJson[field];
+			}
+		}
+
+
+
+}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_324813_ebonding/inbound_incident/incident</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/incident</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-10 12:46:03</sys_created_on>
+        <sys_id>b756fd6993f9f510327d718efaba109c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create incident</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_ws_operation_b756fd6993f9f510327d718efaba109c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-18 15:10:22</sys_updated_on>
+        <web_service_definition display_value="Inbound incident">eea496d993f9b510327d718efaba10e2</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_ws_operation_b756fd6993f9f510327d718efaba109c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;Create incident&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var integType = new GlideRecord('x_324813_ebonding_integration_type');
+	integType.addQuery('table','incident');
+	integType.setLimit(1);
+	integType.query();
+	integType.next();
+
+	var output = {};
+	
+	for(var field in grJson) {
+		var fieldMappings = new GlideRecord('x_324813_ebonding_integration_field_mappings');
+		fieldMappings.addQuery('remote_field',field);
+		fieldMappings.addQuery('integration_type',integType.getUniqueValue());
+		fieldMappings.addQuery('inbound',true);
+		fieldMappings.query();
+		if(fieldMappings.next()){
+			if(fieldMappings.choice_mappings_required == 'true'){
+				var choiceMapping = new GlideRecord('x_324813_ebonding_choice_mapping');
+				choiceMapping.addQuery('remote_choice',grJson[field]);
+				choiceMapping.addQuery('field_mapping',fieldMappings);
+				choiceMapping.query();
+				if(choiceMapping.next()){
+					output[fieldMappings.local_field] = choiceMapping.getValue('local_choice');
+				}
+			} else{
+			output[fieldMappings.local_field] = grJson[field];
+			}
+		}
+
+
+
+}
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_324813_ebonding/inbound_incident/incident&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/incident&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-10-10 12:46:03&lt;/sys_created_on&gt;&lt;sys_id&gt;b756fd6993f9f510327d718efaba109c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Create incident&lt;/sys_name&gt;&lt;sys_package display_value="ebonding" source="x_324813_ebonding"&gt;cd8aacd993b1b510327d718efaba10db&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ebonding"&gt;cd8aacd993b1b510327d718efaba10db&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_b756fd6993f9f510327d718efaba109c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-10-18 15:10:22&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Inbound incident"&gt;eea496d993f9b510327d718efaba10e2&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1564093717</payload_hash>
+        <record_name>Create incident</record_name>
+        <reverted_from/>
+        <source>5def45241bc2bd1036211138b04bcb2c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-19 13:28:57</sys_created_on>
+        <sys_id>911019641bc2bd1036211138b04bcbe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b481ffc200000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-19 13:28:57</sys_updated_on>
+        <type>Scripted REST Resource</type>
+        <update_guid>c5bdd4dc968631101ec04de4a3e5adcc</update_guid>
+        <update_guid_history>c5bdd4dc968631101ec04de4a3e5adcc:-1564093717,95ffeea926fdf510a2efe896e2ee2664:2019683824</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-13 10:45:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_operation">sys_ws_operation</sys_db_object>
+        <sys_id>1e47a18c88634a5788457fc0b098d859</sys_id>
+        <sys_metadata>b756fd6993f9f510327d718efaba109c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create incident</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_ws_operation_b756fd6993f9f510327d718efaba109c</sys_update_name>
+        <sys_update_version display_value="sys_ws_operation_b756fd6993f9f510327d718efaba109c">911019641bc2bd1036211138b04bcbe6</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-13 10:45:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

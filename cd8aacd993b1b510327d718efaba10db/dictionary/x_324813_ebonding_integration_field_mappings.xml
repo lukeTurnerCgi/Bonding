@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="39b7b9d59379b510327d718efaba10f9" label="Integration Field Mappings" max_length="40" name="x_324813_ebonding_integration_field_mappings" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Choice mappings required" max_length="40" name="choice_mappings_required" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="true" label="Inbound" max_length="40" name="inbound" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Transaction Type" max_length="32" name="integration_type" reference="x_324813_ebonding_transaction_type" type="reference"/>
+        <element attributes="allow_references=true,edge_encryption_enabled=true" dependent="integration_type.integration_type.table" dependent_on_field="integration_type.integration_type.table" display="true" label="Local Field" max_length="80" name="local_field" type="field_name" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Mandatory" max_length="40" name="mandatory" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="true" label="Outbound" max_length="40" name="outbound" type="boolean"/>
+        <element label="Remote Field" max_length="40" name="remote_field" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="(function executeRule(fieldMappingGr, triggerRecord) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#13;&#10;})(fieldMappingGr, triggerRecord); &#13;&#10;" label="Processing script" max_length="8000" name="script" type="script"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element attributes="edge_encryption_enabled=true" label="Use processing script" max_length="40" name="use_proccessing_script" type="boolean"/>
+        <index name="index">
+            <element name="integration_type"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index3">
+            <element name="sys_domain_path"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Outbound Info" section_id="3067d27b93fdb510327d718efaba100e" sys_domain="11defdbb937db510327d718efaba10d0" table="x_324813_ebonding_transaction_type" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>http_method</element>
+            <position>0</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>59c922fc1b02315036211138b04bcbc6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>outbound_trigger</element>
+            <position>1</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>51c922fc1b02315036211138b04bcbc7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>triggering_business_rule</element>
+            <position>2</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>55c922fc1b02315036211138b04bcbc7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>response_type</element>
+            <position>3</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>59c922fc1b02315036211138b04bcbc7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>response_transaction_type</element>
+            <position>4</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>5dc922fc1b02315036211138b04bcbc7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>5</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>51c922fc1b02315036211138b04bcbc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>transaction_code</element>
+            <position>6</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>55c922fc1b02315036211138b04bcbc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>inbound_outbound</element>
+            <position>7</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>59c922fc1b02315036211138b04bcbc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>http_method</element>
+            <position>8</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>5dc922fc1b02315036211138b04bcbc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>9</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>51c922fc1b02315036211138b04bcbc9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_type</element>
+            <position>10</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>55c922fc1b02315036211138b04bcbc9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_type.table</element>
+            <position>11</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>59c922fc1b02315036211138b04bcbc9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_domain</element>
+            <position>12</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+            <sys_id>5dc922fc1b02315036211138b04bcbc9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Outbound Info</caption>
+            <header>false</header>
+            <name>x_324813_ebonding_transaction_type</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-17 10:45:03</sys_created_on>
+            <sys_domain>11defdbb937db510327d718efaba10d0</sys_domain>
+            <sys_domain_path/>
+            <sys_id>3067d27b93fdb510327d718efaba100e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_324813_ebonding_transaction_type</sys_name>
+            <sys_overrides caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">fd00c19293bdb910327d718efaba10fe</sys_overrides>
+            <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+            <sys_update_name>sys_ui_section_3067d27b93fdb510327d718efaba100e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-17 10:45:03</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_ui_section_3067d27b93fdb510327d718efaba100e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Outbound Info" section_id="3067d27b93fdb510327d718efaba100e" sys_domain="11defdbb937db510327d718efaba10d0" table="x_324813_ebonding_transaction_type" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>http_method</element><position>0</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>59c922fc1b02315036211138b04bcbc6</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>outbound_trigger</element><position>1</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>51c922fc1b02315036211138b04bcbc7</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>triggering_business_rule</element><position>2</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>55c922fc1b02315036211138b04bcbc7</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>response_type</element><position>3</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>59c922fc1b02315036211138b04bcbc7</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>response_transaction_type</element><position>4</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>5dc922fc1b02315036211138b04bcbc7</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>5</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>51c922fc1b02315036211138b04bcbc8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>transaction_code</element><position>6</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>55c922fc1b02315036211138b04bcbc8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>inbound_outbound</element><position>7</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>59c922fc1b02315036211138b04bcbc8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>http_method</element><position>8</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>5dc922fc1b02315036211138b04bcbc8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>9</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>51c922fc1b02315036211138b04bcbc9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>integration_type</element><position>10</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>55c922fc1b02315036211138b04bcbc9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>integration_type.table</element><position>11</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>59c922fc1b02315036211138b04bcbc9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_domain</element><position>12</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:39:17</sys_created_on><sys_id>5dc922fc1b02315036211138b04bcbc9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="11defdbb937db510327d718efaba10d0" view="Default view">3067d27b93fdb510327d718efaba100e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:39:17</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Outbound Info</caption><header>false</header><name>x_324813_ebonding_transaction_type</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-17 10:45:03</sys_created_on><sys_domain>11defdbb937db510327d718efaba10d0</sys_domain><sys_domain_path/><sys_id>3067d27b93fdb510327d718efaba100e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_324813_ebonding_transaction_type</sys_name><sys_overrides caption="Outbound Info" display_value="Outbound Info" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">fd00c19293bdb910327d718efaba10fe</sys_overrides><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>sys_ui_section_3067d27b93fdb510327d718efaba100e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-10-17 10:45:03</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>901295648</payload_hash>
+        <record_name>Transaction Type</record_name>
+        <reverted_from/>
+        <source>dae09da41bc2bd1036211138b04bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-20 14:39:17</sys_created_on>
+        <sys_id>d9c922fc1b02315036211138b04bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b4d86bc750000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-20 14:39:17</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>51c922fcd902315006c9cf004ab741cc</update_guid>
+        <update_guid_history>51c922fcd902315006c9cf004ab741cc:901295648,cd67d27b4dfdb5103b30636b159ffb14:-1789179857</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-20 14:40:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>013cd684abdb493aac32bf97824d0044</sys_id>
+        <sys_metadata>3067d27b93fdb510327d718efaba100e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_324813_ebonding_transaction_type</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent display_value="Transaction Type">549cfb7193f57910327d718efaba1042</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_ui_section_3067d27b93fdb510327d718efaba100e</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_3067d27b93fdb510327d718efaba100e">d9c922fc1b02315036211138b04bcbcc</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-20 14:40:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

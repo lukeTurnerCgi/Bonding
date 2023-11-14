@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Transaction Type" section_id="0e5d7fb193f57910327d718efaba109e" sys_domain="global" table="x_324813_ebonding_transaction_type" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>0</position>
+            <sys_created_by>luke.turner@cgi.com</sys_created_by>
+            <sys_created_on>2023-10-20 14:41:22</sys_created_on>
+            <sys_id>3f3aeefc1b02315036211138b04bcbb2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Transaction Type" display_value="Transaction Type" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">0e5d7fb193f57910327d718efaba109e</sys_ui_section>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:41:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Transaction Type</caption>
+            <header>false</header>
+            <name>x_324813_ebonding_transaction_type</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-11 13:02:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0e5d7fb193f57910327d718efaba109e</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>x_324813_ebonding_transaction_type</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+            <sys_update_name>sys_ui_section_0e5d7fb193f57910327d718efaba109e</sys_update_name>
+            <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+            <sys_updated_on>2023-10-20 14:41:35</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_ui_section_0e5d7fb193f57910327d718efaba109e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Transaction Type" section_id="0e5d7fb193f57910327d718efaba109e" sys_domain="global" table="x_324813_ebonding_transaction_type" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>0</position><sys_created_by>luke.turner@cgi.com</sys_created_by><sys_created_on>2023-10-20 14:41:22</sys_created_on><sys_id>3f3aeefc1b02315036211138b04bcbb2</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Transaction Type" display_value="Transaction Type" name="x_324813_ebonding_transaction_type" sys_domain="global" view="Default view">0e5d7fb193f57910327d718efaba109e</sys_ui_section><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:41:22</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Transaction Type</caption><header>false</header><name>x_324813_ebonding_transaction_type</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-11 13:02:39</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0e5d7fb193f57910327d718efaba109e</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_324813_ebonding_transaction_type</sys_name><sys_overrides/><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>sys_ui_section_0e5d7fb193f57910327d718efaba109e</sys_update_name><sys_updated_by>luke.turner@cgi.com</sys_updated_by><sys_updated_on>2023-10-20 14:41:35</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-761976848</payload_hash>
+        <record_name>Transaction Type</record_name>
+        <reverted_from/>
+        <source>dae09da41bc2bd1036211138b04bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-20 14:41:35</sys_created_on>
+        <sys_id>474a62301b42315036211138b04bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b4d88d8000000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-20 14:41:35</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>cb4a623002423150f67afdeba70f8d07</update_guid>
+        <update_guid_history>cb4a623002423150f67afdeba70f8d07:-761976848,0f4a62304a423150ebc06360f5a28304:-2108796589,7f3aeefc93023150abf8f2349c1c79e5:-761976848,ca3aaefc56023150672a3e987cad4ddf:1996130999,c69b7db7ea7db5103433f96851a6be5a:1230765042,0be966262475711010aca9bfc4ce2e80:-858557649,0e00059299bdb91071c2d421450eb417:1265606979,561f301267bdb910a1e97f21f509a2fe:-1240874187,3b23109eefb9b910c5fa31321dfad60e:-567504645,94239c5e7bb9b910969dc62a14b7f7dc:1265606979,db82505e0db9b9102ea15c19441ada79:1332989090,7862d01e58b9b91038111ca913aa539c:684571015,3222181e5cb9b9102b826208bc01316b:-1658607289,865d7fb14df579103d43d484d0f83fa8:1195631152,ce5d7fb1e3f5791059fa0ce93ed305a1:1857412212</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-20 14:44:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>34db095a6b404188ace9e37ef521a510</sys_id>
+        <sys_metadata>0e5d7fb193f57910327d718efaba109e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transaction Type</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent display_value="Transaction Type">549cfb7193f57910327d718efaba1042</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_ui_section_0e5d7fb193f57910327d718efaba109e</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_0e5d7fb193f57910327d718efaba109e">474a62301b42315036211138b04bcb08</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-20 14:44:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

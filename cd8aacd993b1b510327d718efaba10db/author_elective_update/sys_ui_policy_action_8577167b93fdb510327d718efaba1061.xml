@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>true</cleared>
+        <disabled>ignore</disabled>
+        <field>http_method</field>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-17 10:45:20</sys_created_on>
+        <sys_id>8577167b93fdb510327d718efaba1061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>http_method</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_ui_policy_action_8577167b93fdb510327d718efaba1061</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-17 10:45:20</sys_updated_on>
+        <table>x_324813_ebonding_transaction_type</table>
+        <ui_policy display_value="Outbound">1439552693fd3110327d718efaba10da</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ebonding">cd8aacd993b1b510327d718efaba10db</application>
+        <file_path/>
+        <instance_id>7a55e0e81bd4b1d8699443f4bd4bcbab</instance_id>
+        <instance_name>snowdondev</instance_name>
+        <name>sys_ui_policy_action_8577167b93fdb510327d718efaba1061</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>true</cleared><disabled>ignore</disabled><field>http_method</field><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-17 10:45:20</sys_created_on><sys_id>8577167b93fdb510327d718efaba1061</sys_id><sys_mod_count>0</sys_mod_count><sys_name>http_method</sys_name><sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package><sys_policy/><sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope><sys_update_name>sys_ui_policy_action_8577167b93fdb510327d718efaba1061</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-10-17 10:45:20</sys_updated_on><table>x_324813_ebonding_transaction_type</table><ui_policy display_value="Outbound">1439552693fd3110327d718efaba10da</ui_policy><visible>false</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>770954985</payload_hash>
+        <record_name>http_method</record_name>
+        <reverted_from/>
+        <source>5def45241bc2bd1036211138b04bcb2c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-19 13:28:55</sys_created_on>
+        <sys_id>7010d5641bc2bd1036211138b04bcbf5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b481ff42f0000001</sys_recorded_at>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-19 13:28:55</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>0177167b6efdb5100dfddf1756ea5764</update_guid>
+        <update_guid_history>0177167b6efdb5100dfddf1756ea5764:770954985</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-06 15:09:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>021c650d818f4d308ff91ffb39b04c10</sys_id>
+        <sys_metadata>8577167b93fdb510327d718efaba1061</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>http_method</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_parent display_value="Outbound">1439552693fd3110327d718efaba10da</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_scope_delete display_value="">8aa2c09cc47a41738716b5c5ad477979</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_8577167b93fdb510327d718efaba1061</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_8577167b93fdb510327d718efaba1061">7010d5641bc2bd1036211138b04bcbf5</sys_update_version>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-06 15:09:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

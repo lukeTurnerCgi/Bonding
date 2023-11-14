@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_service_fulfillment_step">
+    <sc_service_fulfillment_step action="INSERT_OR_UPDATE">
+        <catalog_conditions/>
+        <published_ref/>
+        <service_fulfillment_stage/>
+        <service_fulfillment_step_configuration display_value="Task">dc0f364873122010ae42d31ee2f6a7f3</service_fulfillment_step_configuration>
+        <sys_class_name>sc_service_fulfillment_step</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-26 09:05:39</sys_created_on>
+        <sys_id>cdd6503a1b4e795036211138b04bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sc_service_fulfillment_step_cdd6503a1b4e795036211138b04bcbe8</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-26 09:05:39</sys_updated_on>
+        <title>Task</title>
+    </sc_service_fulfillment_step>
+    <sys_translated_text action="delete_multiple" query="documentkey=cdd6503a1b4e795036211138b04bcbe8"/>
+</record_update>

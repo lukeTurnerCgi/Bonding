@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="200dcdc71b65f1104fe9eb14b24bcb1e" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_324813_ebonding_outbound_transactions</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_324813_ebonding_outbound_transactions">stateCHANGESTOnew^EQ<item display_value="New" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="new"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Proccess Transaction</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+
+    if (current.transaction_type.integration_type.message_format == 'json') {
+        var restMessage = current.transaction_type.http_method.rest_message.sys_scope.scope + '.' + current.transaction_type.http_method.rest_message.name;
+
+        try {
+            var r = new sn_ws.RESTMessageV2(restMessage, current.transaction_type.http_method.function_name);
+
+            var body = current.payload;
+            r.setRequestBody(body);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            current.http_status = httpStatus;
+            current.http_message = responseBody;
+
+            if (httpStatus == '201' || httpStatus == '200') {
+                current.state = 'proccessed';
+            } else {
+                current.state = 'error';
+            }
+
+            current.update();
+        } catch (ex) {
+            var message = ex.message;
+        }
+    }
+
+    if (current.transaction_type.integration_type.message_format == 'soap') {
+        var soapMessage = current.transaction_type.soap_function.soap_message.sys_scope.scope + '.' + current.transaction_type.soap_function.soap_message.name;
+
+        try {
+
+            var jsonPayload = JSON.parse(current.payload);
+
+            var s = new sn_ws.SOAPMessageV2(soapMessage, current.transaction_type.soap_function.function_name);
+			var parameters = new GlideRecord('sys_soap_message_parameters');
+			parameters.addQuery('soap_function',current.transaction_type.soap_function);
+			parameters.query();
+			while(parameters.next()){
+				if(jsonPayload.hasOwnProperty(parameters.name)){
+				s.setStringParameterNoEscape(parameters.name, jsonPayload[parameters.name]);
+				}
+			}
+            
+            var response = s.execute();
+            var responseBody = response.getBody();
+            var status = response.getStatusCode();
+
+            if (status == '201' || status == '200') {
+                current.state = 'proccessed';
+            } else {
+                current.state = 'error';
+            }
+
+            current.update();
+        } catch (ex) {
+            var message = ex.message;
+        }
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-06 15:55:07</sys_created_on>
+        <sys_domain>200dcdc71b65f1104fe9eb14b24bcb1e</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/!#:/</sys_domain_path>
+        <sys_id>752e92de1b1a351036211138b04bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Proccess Transaction</sys_name>
+        <sys_overrides display_value="Process Outbound Transaction">4d2cf9f7937db510327d718efaba10b0</sys_overrides>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_script_752e92de1b1a351036211138b04bcb76</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-06 15:55:07</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=752e92de1b1a351036211138b04bcb76"/>
+</record_update>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<use-ssl-certificate>true</use-ssl-certificate>
+			<allow-unsigned-certificate>false</allow-unsigned-certificate>
+			<install-certificate>true</install-certificate>
+			<keystore-file>C:\Users\smihub\client.keystore</keystore-file>
+			<trust-keystore-file />
+			<keystore-passphrase>changeit</keystore-passphrase>
+			<trust-keystore-passphrase>changeit</trust-keystore-passphrase>
+			<client-alias>smiclient</client-alias>
+			<generator-version>1.0</generator-version>
+			<transport>https-rpc</transport>
+			<soap-url>https://b2b.gw.computacenter.com/?senderParty=PA_UK_CGI&amp;interface=SI_CGI_Incident_AS_OB&amp;interfaceNamespace=http%3A%2F%2Fcgi.com%2Fservices&amp;zAdpt=soapaxis&amp;zI=nc2&amp;zICC=true</soap-url>
+			<http-connection-properties>
+				<Content-Type>text/xml; charset=utf-8</Content-Type>
+				<soapAction>http://sap.com/xi/WebService/soap1.1</soapAction>
+				<Authorization>Basic UEFfVUtfQ0dJLVA6OGVLdSE4bTVzUk9QWiNFZWN0ZmgyRiNETi1FMFJj</Authorization>
+			</http-connection-properties>
+			<soap-message>
+				<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+					<soapenv:Body>
+						<ext:TaskCreateAndUpdate xmlns:ext="https://integration.computacenter.co.uk/Computacenter/Smts/External/">
+							<urn:taskCreate xmlns:urn="urn:computacenter:mgt:schemas:services:5:0">
+								<urn:Source>LOGICA SMI HUB</urn:Source>
+								<urn:SourceReferenceId>${number}</urn:SourceReferenceId>
+								<urn:ShortDescription>${short_description}</urn:ShortDescription>
+								<urn:DetailedDescription>${description}</urn:DetailedDescription>
+								<urn:Priority>${priority}</urn:Priority>
+								<urn:ProductCategoryTier1>${category}</urn:ProductCategoryTier1>
+								<urn:ProductCategoryTier2>${sub_category}</urn:ProductCategoryTier2>
+								<urn:ProductCategoryTier3></urn:ProductCategoryTier3>
+								<urn:ProductCategoryTier4 />
+								<urn:ServiceCategoryTier1>${service_category}</urn:ServiceCategoryTier1>
+								<urn:ServiceCategoryTier2 />
+								<urn:ServiceCategoryTier3 />
+								<urn:SystemType>${system_type}</urn:SystemType>
+								<urn:SystemEvent>${transaction_code}</urn:SystemEvent>
+								<urn:ReportedDateTime />
+								<urn:RaisedFor>
+									<urn:UniqueId>${raised_for_id}</urn:UniqueId>
+									<urn:CompanyName>${raised_for_company}</urn:CompanyName>
+									<urn:FirstName>${raised_for_first_name}</urn:FirstName>
+									<urn:LastName>${raised_for_last_name}</urn:LastName>
+									<urn:EmailAddress>${raised_for_email}</urn:EmailAddress>
+									<urn:PhoneNumber>${raised_for_phone}</urn:PhoneNumber>
+									<urn:MobileNumber />
+									<urn:VIP>${vip}</urn:VIP>
+								</urn:RaisedFor>
+								<urn:Site>
+									<urn:SiteName>${site}</urn:SiteName>
+								</urn:Site>
+							</urn:taskCreate>
+						</ext:TaskCreateAndUpdate>
+					</soapenv:Body>
+				</soapenv:Envelope>
+			</soap-message>]]></envelope>
+        <function_name>outbound-new</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>ComputaCenter [ outbound-new ]</qualified_name>
+        <soap_action/>
+        <soap_endpoint/>
+        <soap_message display_value="ComputaCenter">d84b59921bd2351036211138b04bcb04</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-11-06 11:04:39</sys_created_on>
+        <sys_id>f36b5d921bd2351036211138b04bcba5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>outbound-new</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_soap_message_function_f36b5d921bd2351036211138b04bcba5</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-06 11:10:07</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

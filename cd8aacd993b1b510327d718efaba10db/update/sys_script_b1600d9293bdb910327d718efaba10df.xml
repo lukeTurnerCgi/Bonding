@@ -3,7 +3,7 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
@@ -24,7 +24,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Update outbound BR</name>
+        <name>Update Outbound BR</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -44,15 +44,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b1600d9293bdb910327d718efaba10df</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Update outbound BR</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Update Outbound BR</sys_name>
         <sys_overrides/>
         <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
         <sys_policy/>
         <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
         <sys_update_name>sys_script_b1600d9293bdb910327d718efaba10df</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-13 10:54:04</sys_updated_on>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-11-10 10:50:43</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

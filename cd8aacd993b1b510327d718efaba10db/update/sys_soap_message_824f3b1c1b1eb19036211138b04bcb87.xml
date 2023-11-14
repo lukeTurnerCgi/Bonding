@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Admin">dd5600611b50f11056266204b24bcbdb</basic_auth_profile>
+        <basic_auth_user/>
+        <description/>
+        <download_wsdl>true</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>Proccess Transaction</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>luke.turner@cgi.com</sys_created_by>
+        <sys_created_on>2023-10-31 17:53:00</sys_created_on>
+        <sys_id>824f3b1c1b1eb19036211138b04bcb87</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Proccess Transaction</sys_name>
+        <sys_package display_value="ebonding" source="x_324813_ebonding">cd8aacd993b1b510327d718efaba10db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ebonding">cd8aacd993b1b510327d718efaba10db</sys_scope>
+        <sys_update_name>sys_soap_message_824f3b1c1b1eb19036211138b04bcb87</sys_update_name>
+        <sys_updated_by>luke.turner@cgi.com</sys_updated_by>
+        <sys_updated_on>2023-10-31 17:58:30</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl>https://snowdondev.service-now.com/GetProperty.do?WSDL</wsdl>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.service-now.com/GetProperty" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.service-now.com/GetProperty" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://www.service-now.com/GetProperty"><xsd:element name="execute"><xsd:complexType><xsd:sequence><xsd:element maxOccurs="1" minOccurs="0" name="property" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element><xsd:element name="executeResponse"><xsd:complexType><xsd:sequence><xsd:element maxOccurs="1" minOccurs="0" name="property" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="executeSoapOut">
+    <wsdl:part name="GetProperty" element="tns:executeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="executeSoapIn">
+    <wsdl:part name="GetProperty" element="tns:execute">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServiceNowSoap">
+    <wsdl:operation name="execute">
+      <wsdl:input message="tns:executeSoapIn">
+    </wsdl:input>
+      <wsdl:output message="tns:executeSoapOut">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceNowSoap" type="tns:ServiceNowSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="execute">
+      <soap:operation soapAction="http://www.service-now.com/GetProperty/execute" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceNow_GetProperty">
+    <wsdl:port name="ServiceNowSoap" binding="tns:ServiceNowSoap">
+      <soap:address location="https://snowdondev.service-now.com/GetProperty.do?SOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
+]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>
